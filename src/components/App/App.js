@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import './App.scss';
 
+import { Contact } from '../Contact/Contact';
+
 class App extends Component {
   constructor() {
     super();
@@ -20,7 +22,7 @@ class App extends Component {
       <div className="App">
       </div>
     );
-  }
+  };
 }
 
 export default App;
