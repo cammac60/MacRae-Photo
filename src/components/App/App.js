@@ -56,7 +56,7 @@ class App extends Component {
 // changeImage or handleImgClick?
           />
         } />
-        <Route path="/photos/:id" render={() => <Photos />} />
+        <Route path="/photos/:id" render={() => <Photo />} />
       </div>
     );
   };
