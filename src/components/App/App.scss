@@ -2,13 +2,13 @@
 
 * {
   box-sizing: border-box;
+  color: $main-accent-color;
   margin: 0;
   padding: 0;
 }
 
 .App {
   background-color: #000000;
-  color: $main-accent-color;
   height: 100vh;
   text-align: center;
   width: 100vw;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Route, withRouter } from 'react-router-dom';
 import './App.scss';
 
 import { Contact } from '../Contact/Contact';
@@ -21,12 +21,25 @@ class App extends Component {
     document.title = 'MacRae Photo';
   };
 
+  changeColor = hex => {
+    this.setState({selectedColor: hex});
+  };
+
   render = () => {
+
+    const { selectedColor } = this.state;
+
     return (
       <div className="App">
+        <Route exact path="/" render={()=>
+          <Splash
+          selectedColor={selectedColor}
+          changeColor={this.changeColor}
+          />}
+        />
       </div>
     );
   };
 }
 
-export default App;
+export default withRouter(App);
