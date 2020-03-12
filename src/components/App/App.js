@@ -1,13 +1,26 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { Link, withRouter } from 'react-router-dom';
 import './App.scss';
 
 
-function App() {
-  return (
-    <div className="App">
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
 
-    </div>
-  );
+    };
+  }
+
+  componentDidMount = () => {
+    document.title = 'MacRae Photo';
+  };
+
+  render = () => {
+    return (
+      <div className="App">
+      </div>
+    );
+  }
 }
 
 export default App;
