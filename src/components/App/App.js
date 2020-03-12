@@ -13,7 +13,8 @@ class App extends Component {
     super();
     this.state = {
       selectedColor: '#ffffff',
-      selectedImg: null
+      selectedImg: null,
+      selectedPath: ''
     };
   }
 
@@ -25,9 +26,20 @@ class App extends Component {
     this.setState({selectedColor: hex});
   };
 
+  changeImage = (path, id) => {
+    this.setState({
+      selectedImg: id,
+      selectedPath: path
+    });
+  };
+
+  handleImgClick = () => {
+// Does the logic for grabbing from the data file live here?
+  };
+
   render = () => {
 
-    const { selectedColor } = this.state;
+    const { selectedColor, selectedImg } = this.state;
 
     return (
       <div className="App">
@@ -35,8 +47,16 @@ class App extends Component {
           <Splash
           selectedColor={selectedColor}
           changeColor={this.changeColor}
-          />}
-        />
+          />
+        } />
+        <Route exact path="/about" render={() => <About />} />
+        <Route exact path="/contact" render={() => <Contact />} />
+        <Route exact path="/gallery" render={() =>
+          <Gallery
+// changeImage or handleImgClick?
+          />
+        } />
+        <Route path="/photos/:id" render={() => <Photos />} />
       </div>
     );
   };
