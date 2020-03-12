@@ -3,6 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 import './App.scss';
 
 import { Contact } from '../Contact/Contact';
+import { Gallery } from '../Gallery/Gallery';
 
 class App extends Component {
   constructor() {
