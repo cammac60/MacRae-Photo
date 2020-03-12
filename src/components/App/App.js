@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import './App.scss';
 
-
 class App extends Component {
   constructor() {
     super();
     this.state = {
-
+      selectedColor: '#ffffff',
+      selectedImg: null
     };
   }
 
