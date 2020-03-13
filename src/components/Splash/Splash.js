@@ -9,8 +9,11 @@ export const Splash = props => {
       <div className="splash-back">
         <div className="blur-wrapper">
           <div className="menu-wrapper">
-          <img className="contain-img" src={require('../../images/main/rmnp-road2.JPG')} />
-
+          <div className="text-wrapper">
+            <h1>MacRae Photo</h1>
+            <div className="options-wrapper-lrg">
+            </div>
+          </div>
           </div>
         </div>
       </div>
