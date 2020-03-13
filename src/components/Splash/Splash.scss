@@ -19,6 +19,10 @@
 
 .blur-wrapper {
   backdrop-filter: blur(4px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2%;
   height: 100%;
   width: 100%;
 }
@@ -31,7 +35,11 @@
     size: contain;
   }
   border: 1px solid $main-color;
-  width: 85%;
+  margin: {
+    right: auto;
+    top: auto;
+  }
+  width: 95%;
 }
 
 .contain-img {
