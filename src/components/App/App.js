@@ -8,13 +8,14 @@ import { Photo } from '../Photo/Photo';
 import { About } from '../About/About';
 import { Splash } from '../Splash/Splash';
 
+import { data } from '../../data';
+
 class App extends Component {
   constructor() {
     super();
     this.state = {
       selectedColor: '#ffffff',
-      selectedImg: null,
-      selectedPath: ''
+      selectedImg: {}
     };
   }
 
@@ -26,15 +27,15 @@ class App extends Component {
     this.setState({selectedColor: hex});
   };
 
-  changeImage = (path, id) => {
+  changeImage = img => {
     this.setState({
-      selectedImg: id,
-      selectedPath: path
+      selectedImg: img
     });
   };
 
-  handleImgClick = () => {
-// Does the logic for grabbing from the data file live here?
+  handleImgClick = id => {
+    let selectedImg = data[id];
+    changeImage(selectedImg);
   };
 
   render = () => {
