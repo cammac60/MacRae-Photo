@@ -2,7 +2,7 @@
 
 * {
   box-sizing: border-box;
-  color: $main-accent-color;
+  color: $main-color;
   margin: 0;
   padding: 0;
 }
@@ -14,6 +14,6 @@
   width: 100vw;
 }
 
-button {
+button, Link {
   cursor: pointer;
 }

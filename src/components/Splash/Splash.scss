@@ -22,3 +22,19 @@
   height: 100%;
   width: 100%;
 }
+
+.menu-wrapper {
+  background: {
+    image: url('../../images/main/rmnp-road2.JPG');
+    position: center;
+    repeat: no-repeat;
+    size: contain;
+  }
+  border: 1px solid $main-color;
+  width: 85%;
+}
+
+.contain-img {
+  visibility: hidden;
+  width: 100%;
+}
