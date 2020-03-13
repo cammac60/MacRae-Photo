@@ -8,7 +8,7 @@ import { Photo } from '../Photo/Photo';
 import { About } from '../About/About';
 import { Splash } from '../Splash/Splash';
 
-import { data } from '../../data';
+import { images } from '../../data';
 
 class App extends Component {
   constructor() {
@@ -34,8 +34,8 @@ class App extends Component {
   };
 
   handleImgClick = id => {
-    let selectedImg = data[id];
-    changeImage(selectedImg);
+    let selectedImg = images[id];
+    this.changeImage(selectedImg);
   };
 
   render = () => {

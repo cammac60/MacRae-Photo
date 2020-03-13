@@ -1,1 +1,24 @@
 @import '../../variables.scss';
+
+.Splash {
+  height: 100vh;
+  width: 100vw;
+}
+
+.splash-back {
+  background: {
+    image: url('../../images/main/rmnp-road2.JPG');
+    position: center;
+    repeat: no-repeat;
+    size: cover;
+  }
+  height: 100%;
+  position: fixed;
+  width: 100%;
+}
+
+.blur-wrapper {
+  backdrop-filter: blur(4px);
+  height: 100%;
+  width: 100%;
+}
