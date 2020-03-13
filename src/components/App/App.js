@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Route, withRouter } from 'react-router-dom';
 import './App.scss';
 
 import { Contact } from '../Contact/Contact';
@@ -8,12 +8,14 @@ import { Photo } from '../Photo/Photo';
 import { About } from '../About/About';
 import { Splash } from '../Splash/Splash';
 
+import { data } from '../../data';
+
 class App extends Component {
   constructor() {
     super();
     this.state = {
       selectedColor: '#ffffff',
-      selectedImg: null
+      selectedImg: {}
     };
   }
 
@@ -21,12 +23,44 @@ class App extends Component {
     document.title = 'MacRae Photo';
   };
 
+  changeColor = hex => {
+    this.setState({selectedColor: hex});
+  };
+
+  changeImage = img => {
+    this.setState({
+      selectedImg: img
+    });
+  };
+
+  handleImgClick = id => {
+    let selectedImg = data[id];
+    changeImage(selectedImg);
+  };
+
   render = () => {
+
+    const { selectedColor, selectedImg } = this.state;
+
     return (
       <div className="App">
+        <Route exact path="/" render={()=>
+          <Splash
+          selectedColor={selectedColor}
+          changeColor={this.changeColor}
+          />
+        } />
+        <Route exact path="/about" render={() => <About />} />
+        <Route exact path="/contact" render={() => <Contact />} />
+        <Route exact path="/gallery" render={() =>
+          <Gallery
+// changeImage or handleImgClick?
+          />
+        } />
+        <Route path="/photos/:id" render={() => <Photo />} />
       </div>
     );
   };
 }
 
-export default App;
+export default withRouter(App);
