@@ -32,17 +32,34 @@
     image: url('../../images/main/rmnp-road2.JPG');
     position: center;
     repeat: no-repeat;
-    size: contain;
+    size: cover;
   }
   border: 1px solid $main-color;
+  height: 650px;
   margin: {
     right: auto;
     top: auto;
   }
+  overflow: hidden;
+  padding: 2%;
   width: 95%;
 }
 
-.contain-img {
-  visibility: hidden;
+.text-wrapper {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
   width: 100%;
+}
+
+h1 {
+  font: {
+    family: $large-font;
+    size: 7rem;
+    weight: normal;
+  }
+  margin: {
+    top: auto;
+    bottom: -2.5%;
+  }
 }
