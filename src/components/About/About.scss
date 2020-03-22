@@ -32,7 +32,7 @@
     right: auto;
     top: auto;
   }
-  overflow: hidden;
+  overflow: visible;
   padding: 2%;
   width: 95%;
 }
@@ -50,6 +50,8 @@
 .profile-img {
   border: 1px solid $main-color;
   height: 500px;
+  position: relative;
+  top: -70px;
 }
 
 .bio-text {
