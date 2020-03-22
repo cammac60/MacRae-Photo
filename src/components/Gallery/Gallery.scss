@@ -87,3 +87,32 @@
   }
   width: 50px;
 }
+
+.photo-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 40px;
+  height: 100%;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+  overflow-x: scroll;
+  padding: {
+    bottom: 5%;
+    top: 5%;
+  }
+  width: 96%;
+}
+
+.gallery-tile {
+  border: 1px solid $main-color;
+  cursor: pointer;
+  height: 300px;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+  width: 300px;
+}
