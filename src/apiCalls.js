@@ -9,7 +9,7 @@ export const postMessage = async (email, message) => {
   };
   const response = await fetch(url, payload);
   if(!response.ok) {
-    throw new Error('Error: There was a problem sending your message.');
+    throw new Error('There was a problem sending your message.');
   }
   const id = await response.json();
   return id
