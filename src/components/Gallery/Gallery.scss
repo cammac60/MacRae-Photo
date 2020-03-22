@@ -15,19 +15,45 @@
   }
   background-blend-mode: darken;
   height: 100%;
-  filter: grayscale(100%);
   position: fixed;
   width: 100%;
 }
 
+.blur-wrapper {
+  padding: {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 5%;
+  }
+}
+
 .gallery-header {
+  background: {
+    color: rgba(0, 0, 0, 0.6);
+    image: url('../../images/dakota-hogback2.JPG');
+    position: 50% 12%;
+    repeat: no-repeat;
+  }
+  background-blend-mode: darken;
+  border: {
+    bottom: 1px solid $main-color;
+    top: 1px solid $main-color;
+  }
+  display: flex;
+  justify-content: space-between;
   margin-bottom: auto;
+  padding: {
+    left: 2%;
+    right: 2%;
+  }
 }
 
 .gallery-title {
+  color: $main-accent-color;
   font: {
     family: $large-font;
-    size: 3rem;
+    size: 6rem;
     weight: normal;
   }
 }
