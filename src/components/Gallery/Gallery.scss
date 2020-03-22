@@ -114,6 +114,7 @@
     left: auto;
     right: auto;
   }
+  object-fit: cover;
   width: 400px;
   &:active {
     border: 1px solid $main-accent-color;
