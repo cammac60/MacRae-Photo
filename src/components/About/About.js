@@ -15,9 +15,11 @@ export const About = () => {
                 <p className="bio-text">
                 I am a hobbyist photographer based in Denver, CO who specializes in landscape and cityscape. My passion for photography comes from my love of travelling and geography. Being able to document the world around me inspires me to see as much as possible and to step outside of my comfort zone.
                 </p>
+                <br/>
                 <p className="bio-text">
                 I generally don’t shoot with a “theme” in mind but I enjoy distoring my photos and using unorthodox angles to create simple and somewhat minimalistic compositions.
                 </p>
+                <br/>
                 <p className="bio-text">
                 Outside of photography I work as a software engineer and enjoy weight lifting, hiking, and hockey.
                 </p>
