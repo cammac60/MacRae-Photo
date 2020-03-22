@@ -18,3 +18,13 @@
 button, Link {
   cursor: pointer;
 }
+
+.blur-wrapper {
+  backdrop-filter: blur(2px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2%;
+  height: 100%;
+  width: 100%;
+}
