@@ -34,4 +34,13 @@ describe('POST', () => {
       expect(postMessage(mockEmail, mockDesc)).resolves.toEqual(mockResponse);
   });
 
+  it('should return an error for a response that is not ok', () => {
+    window.fetch = jest.fn().mockImplementation(() => {
+      return Promise.resolve({
+        ok: false
+      });
+    });
+    expect(postMessage(mockEmail, mockDesc)).rejects.toEqual(Error(
+      'There was a problem sending your message.'));
+    });
 });
