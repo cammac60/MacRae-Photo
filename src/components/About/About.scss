@@ -36,3 +36,32 @@
   padding: 2%;
   width: 95%;
 }
+
+.bio-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+  width: 95%;
+}
+
+.profile-img {
+  border: 1px solid $main-color;
+  height: 500px;
+}
+
+.bio-text {
+  text-indent: 20px;
+  width: 100%;
+}
+
+.bio-text-wrapper {
+  font: {
+    size: 1.4rem;
+    weight: 300;
+  }
+  text-align: left;
+  width: 55%;
+}
