@@ -109,10 +109,16 @@
 .gallery-tile {
   border: 1px solid $main-color;
   cursor: pointer;
-  height: 300px;
+  height: 400px;
   margin: {
     left: auto;
     right: auto;
   }
-  width: 300px;
+  width: 400px;
+  &:active {
+    border: 1px solid $main-accent-color;
+  }
+  &:hover {
+    filter: blur(2px);
+  }
 }
