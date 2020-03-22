@@ -9,7 +9,11 @@ export const Gallery = props => {
   const imagesTiles = images.map((img, i) => {
     const url = `../../images/main/${img.link}.JPG`
     return (
-        <img alt={`Photo #${i}`} id={i} className="gallery-tile" src={require(`../../images/main/${img.link}.JPG`)}/>
+      <Link to={`/photos/${i + 1}`} className="photo-link">
+        <div className="blur-wrapper-3">
+          <img alt={`Photo #${i}`} id={i} className="gallery-tile" src={require(`../../images/main/${img.link}.JPG`)}/>
+        </div>
+      </Link>
     )
   });
   return (
