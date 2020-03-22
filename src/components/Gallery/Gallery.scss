@@ -1,1 +1,33 @@
 @import '../../variables.scss';
+
+.Gallery {
+  height: 100vh;
+  width: 100vw;
+}
+
+.gallery-back {
+  background: {
+    color: rgba(0, 0, 0, 0.8);
+    image: url('../../images/dakota-hogback2.JPG');
+    position: center;
+    repeat: no-repeat;
+    size: cover;
+  }
+  background-blend-mode: darken;
+  height: 100%;
+  filter: grayscale(100%);
+  position: fixed;
+  width: 100%;
+}
+
+.gallery-header {
+  margin-bottom: auto;
+}
+
+.gallery-title {
+  font: {
+    family: $large-font;
+    size: 3rem;
+    weight: normal;
+  }
+}
