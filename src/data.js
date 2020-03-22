@@ -187,5 +187,10 @@ export const images = [
     link: 'space-needle2',
     title: 'Untitled',
     location: 'Seattle, Washington'
+  },
+  {
+    link: 'nodes',
+    title: 'Nodes',
+    location: 'Denver, Colorado'
   }
 ];
