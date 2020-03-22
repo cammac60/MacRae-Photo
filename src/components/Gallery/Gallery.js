@@ -4,6 +4,14 @@ import { Link } from 'react-router-dom';
 import './Gallery.scss';
 
 export const Gallery = props => {
+  const { images } = props;
+  console.log(images);
+  const imagesTiles = images.map((img, i) => {
+    const url = `../../images/main/${img.link}.JPG`
+    return (
+        <img alt={`Photo #${i}`} id={i} className="gallery-tile" src={require(`../../images/main/${img.link}.JPG`)}/>
+    )
+  });
   return (
     <div className="Gallery">
       <div className="gallery-back">
@@ -17,6 +25,9 @@ export const Gallery = props => {
               </a>
             </div>
           </header>
+          <section className="photo-wrapper">
+            {imagesTiles}
+          </section>
         </div>
       </div>
     </div>

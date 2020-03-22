@@ -1,190 +1,190 @@
 export const images = [
   {
-    link: '../public/images/main/25.JPG',
+    link: '25',
     title: 'Rush Hour',
     location: 'Denver, Colorado'
   },
   {
-    link: '../public/images/main/boston-hotel2.JPG',
+    link: 'boston-hotel2',
     title: 'Shadow Boxing',
     location: 'Boston, Massachusetts'
   },
   {
-    link: '../public/images/main/bushwack2.JPG',
+    link: 'bushwack2',
     title: 'Trail Blazer',
     location: 'Rocky Mountain NP, Colorado'
   },
   {
-    link: '../public/images/main/delicate-arch2.JPG',
+    link: 'delicate-arch2',
     title: 'Untitled',
     location: 'Arches NP, Utah'
   },
   {
-    link: '../public/images/main/denver-lookout2.JPG',
+    link: 'denver-lookout2',
     title: 'A Cut Above',
     location: 'Denver, Colorado'
   },
   {
-    link: '../public/images/main/boston2.JPG',
+    link: 'boston2',
     title: 'Departed',
     location: 'Boston, Massachusetts'
   },
   {
-    link: '../public/images/main/desert-cruiser2.JPG',
+    link: 'desert-cruiser2',
     title: 'Desert Cruiser',
     location: 'Moab, Utah'
   },
   {
-    link: '../public/images/main/elitch-rflc2.JPG',
+    link: 'elitch-rflc2',
     title: 'Reflection',
     location: 'Denver, Colorado'
   },
   {
-    link: '../public/images/main/endlesssummer2.JPG',
+    link: 'endlesssummer2',
     title: 'Endless Summer',
     location: 'Leo Carillo SP, California'
   },
   {
-    link: '../public/images/main/ferris-wheel2.JPG',
+    link: 'ferris-wheel2',
     title: 'Untitled',
     location: 'Seattle, Washington'
   },
   {
-    link: '../public/images/main/denverfromafar2.JPG',
+    link: 'denverfromafar2',
     title: 'Untitled',
     location: 'Denver, Colorado'
   },
   {
-    link: '../public/images/main/desert-road2.JPG',
+    link: 'desert-road2',
     title: 'Untiled',
     location: 'Canyonlands NP, Utah'
   },
   {
-    link: '../public/images/main/glenwoodcanyon2.JPG',
+    link: 'glenwoodcanyon2',
     title: 'Impasse',
     location: 'Glenwood Canyon, Colorado'
   },
   {
-    link: '../public/images/main/golden-road2.JPG',
+    link: 'golden-road2',
     title: 'Hairpin',
     location: 'Golden, Colorado'
   },
   {
-    link: '../public/images/main/griffithview2.JPG',
+    link: 'griffithview2',
     title: 'LAyers',
     location: 'Los Angeles, California'
   },
   {
-    link: '../public/images/main/half-moon2.JPG',
+    link: 'half-moon2',
     title: 'Limbo',
     location: 'Moab, Utah'
   },
   {
-    link: '../public/images/main/inception2.JPG',
+    link: 'inception2',
     title: 'On It\'s Head',
     location: 'Denver, Colorado'
   },
   {
-    link: '../public/images/main/lake-isabelle2.JPG',
+    link: 'lake-isabelle2',
     title: 'Convection',
     location: 'Brainard Lake, Colorado'
   },
   {
-    link: '../public/images/main/laoverpass2.JPG',
+    link: 'laoverpass2',
     title: 'Changing Lanes',
     location: 'Los Angeles, California'
   },
   {
-    link: '../public/images/main/lightpaint2.JPG',
+    link: 'lightpaint2',
     title: 'Trailing Off',
     location: 'Morrison, Colorado'
   },
   {
-    link: '../public/images/main/lightpost2.JPG',
+    link: 'lightpost2',
     title: 'Untitled',
     location: 'Denver, Colorado'
   },
   {
-    link: '../public/images/main/mystery-man2.JPG',
+    link: 'mystery-man2',
     title: 'Cashing Checks',
     location: 'Seattle, Washington'
   },
   {
-    link: '../public/images/main/nh-capital2.JPG',
+    link: 'nh-capital2',
     title: 'Untitled',
     location: 'Concord, New Hampshire'
   },
   {
-    link: '../public/images/main/night-rider2.JPG',
+    link: 'night-rider2',
     title: 'Night Rider',
     location: 'Seattle, Washington'
   },
   {
-    link: '../public/images/main/rainier2.JPG',
+    link: 'rainier2',
     title: 'Last Light',
     location: 'Mount Rainier, Washinton'
   },
   {
-    link: '../public/images/main/redrocksroad2.JPG',
+    link: 'redrocksroad2',
     title: 'Untitled',
     location: 'Morrison, Colorado'
   },
   {
-    link: '../public/images/main/redtree2.JPG',
+    link: 'redtree2',
     title: 'Standalone',
     location: 'Deer Creek Canyon, Colorado'
   },
   {
-    link: '../public/images/main/van-skyline2.JPG',
+    link: 'van-skyline2',
     title: 'Vanorama',
     location: 'Vancouver, British Columbia'
   },
   {
-    link: '../public/images/main/rmnp-road2.JPG',
+    link: 'rmnp-road2',
     title: 'Climbing',
     location: 'Rocky Mountain NP, Colorado'
   },
   {
-    link: '../public/images/main/sand-dunes-rover2.JPG',
+    link: 'sand-dunes-rover2',
     title: 'Rover',
     location: 'Great Sand Dunes NP, Colorado'
   },
   {
-    link: '../public/images/main/snakingroad2.JPG',
+    link: 'snakingroad2',
     title: 'Line Rider',
     location: 'Moorpark, California'
   },
   {
-    link: '../public/images/main/space-needle-22.JPG',
+    link: 'space-needle-22',
     title: 'Saucer',
     location: 'Seattle, Washington'
   },
   {
-    link: '../public/images/main/traincurve2.JPG',
+    link: 'traincurve2',
     title: 'Transit',
     location: 'Denver, Colorado'
   },
   {
-    link: '../public/images/main/union2.JPG',
+    link: 'union',
     title: 'Stacked',
     location: 'Denver, Colorado'
   },{
-    link: '../public/images/main/van-people2.JPG',
+    link: 'van-people2',
     title: 'Gathering',
     location: 'Vancouver, British Columbia'
   },
   {
-    link: '../public/images/main/windowwatcher2.JPG',
+    link: 'windowwatcher2',
     title: 'Smoke Break',
     location: 'Fort Collins, Colorado'
   },
   {
-    link: '../public/images/main/rmnp2.JPG',
+    link: 'rmnp2',
     title: 'Twelve Thousand',
     location: 'Rocky Mountain NP, Colorado'
   },
   {
-    link: '../public/images/main/space-needle2.JPG',
+    link: 'space-needle2',
     title: 'Untitled',
     location: 'Seattle, Washington'
   }
