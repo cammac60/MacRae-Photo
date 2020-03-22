@@ -25,6 +25,10 @@ export const About = () => {
                 </p>
               </div>
             </div>
+            <div className="bio-footer">
+              <h2 className="bio-name">Cameron MacRae</h2>
+              <Link to="/" className="back-btn">Back</Link>
+            </div>
           </div>
         </div>
       </div>

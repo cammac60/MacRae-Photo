@@ -67,3 +67,39 @@
   text-align: left;
   width: 55%;
 }
+
+.bio-footer {
+  display: flex;
+  justify-content: space-between;
+  margin: {
+    left: auto;
+    right: auto;
+    top: auto;
+  }
+  width: 95%;
+}
+
+.bio-name {
+  font: {
+    family: $large-font;
+    size: 5rem;
+    weight: normal;
+  }
+  margin-top: auto;
+  max-height: 85px;
+}
+
+.back-btn {
+  font: {
+    size: 2rem;
+    weight: 300;
+  }
+  margin-top: auto;
+  text: {
+    align: right;
+    decoration: none;
+  }
+  &:hover {
+    color: $secondary-accent-1;
+  }
+}
