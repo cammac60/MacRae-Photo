@@ -35,6 +35,7 @@ class App extends Component {
 
   handleImgClick = id => {
     let selectedImg = images[id];
+    console.log(selectedImg);
     this.changeImage(selectedImg);
   };
 
@@ -55,7 +56,7 @@ class App extends Component {
         <Route exact path="/gallery" render={() =>
           <Gallery
             images={images}
-// changeImage or handleImgClick?
+            handleImgClick={this.handleImgClick}
           />
         } />
         <Route path="/photos/:id" render={() => <Photo />} />

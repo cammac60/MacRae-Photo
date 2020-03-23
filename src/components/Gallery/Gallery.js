@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 import './Gallery.scss';
 
 export const Gallery = props => {
-  const { images } = props;
+  const { images, handleImgClick } = props;
   console.log(images);
   const imagesTiles = images.map((img, i) => {
     const url = `../../images/main/${img.link}.JPG`
     return (
-      <Link to={`/photos/${i + 1}`} className="photo-link">
+      <Link to={`/photos/${i + 1}`} className="photo-link" onClick={i => handleImgClick(i)} key={i}>
         <div className="blur-wrapper-3">
           <img alt={`Photo #${i}`} id={i} className="gallery-tile" src={require(`../../images/main/${img.link}.JPG`)}/>
         </div>
