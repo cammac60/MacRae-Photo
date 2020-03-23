@@ -15,12 +15,57 @@
   }
   background-blend-mode: darken;
   height: 100%;
-  padding: {
-    bottom: 2%;
-    left: 2%;
-    right: 2%;
-    top: 5%;
-  }
+  padding: 2%;
   position: fixed;
   width: 100%;
+}
+
+.port-wrap {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.landscape-photo {
+  border: 2px solid $main-color;
+  height: 100%;
+}
+
+.landscape-text-wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  text-align: right;
+}
+
+.photo-title {
+  color: $main-accent-color;
+  font: {
+    family: $large-font;
+    size: 6rem;
+    weight: normal;
+  }
+}
+
+.photo-location {
+  font: {
+    size: 1.6rem;
+    weight: 300;
+  }
+}
+
+.photo-back-btn {
+  &:hover {
+    color: $main-accent-color;
+  }
+  &:active {
+    text-decoration: underline;
+  }
+  font: {
+    size: 2rem;
+    weight: 300;
+  }
+  margin: 0;
 }
