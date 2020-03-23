@@ -7,6 +7,7 @@ import { Gallery } from '../Gallery/Gallery';
 import { Photo } from '../Photo/Photo';
 import { About } from '../About/About';
 import { Splash } from '../Splash/Splash';
+import { Loader } from '../Loader/Loader';
 
 import { images } from '../../data';
 
@@ -35,8 +36,8 @@ class App extends Component {
 
   handleImgClick = ({ target }) => {
     const { id } = target;
-    let selectedImg = images[id];
-    this.changeImage(selectedImg);
+    this.changeImage(id);
+    this.props.history.push(`/photos/${parseInt(id) + 1}`);
   };
 
   render = () => {
@@ -60,10 +61,12 @@ class App extends Component {
           />
         } />
         <Route path="/photos/:id" render={() =>
+          selectedImg ?
           <Photo
-            image={this.state.selectedImg}
+            image={selectedImg}
             changeImage={this.changeImage}
-          />
+          /> :
+          <Loader />
         } />
       </div>
     );
