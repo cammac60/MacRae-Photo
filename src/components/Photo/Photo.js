@@ -20,7 +20,7 @@ export const Photo = props => {
           <h2 className="photo-title">{image.title}</h2>
           <span className="photo-location">{image.location}</span>
         </div>
-        <Link to="/photos" className="photo-back-btn">Back</Link>
+        <Link to="/gallery" className="photo-back-btn">Back</Link>
       </div>
     </div>;
 
