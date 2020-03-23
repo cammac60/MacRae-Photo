@@ -43,7 +43,7 @@ export const Splash = props => {
                   Contact
                 </Link>
               </div>
-              <a className="ig-link" href="https://www.instagram.com/macrae_5280/?hl=en" target="_blank">
+              <a className="ig-link" href="https://www.instagram.com/macrae_5280/?hl=en" target="_blank" rel="noopener noreferrer">
                 <img alt="Instagram Logo" src={require('../../images/icons/instagram.svg')} className="ig-logo" fill="#ffffff"/>
               </a>
             </div>
