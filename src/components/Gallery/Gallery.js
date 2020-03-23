@@ -7,11 +7,15 @@ export const Gallery = props => {
   const { images, handleImgClick } = props;
   const imagesTiles = images.map((img, i) => {
     return (
-      <Link to={`/photos/${i + 1}`} id={i} className="photo-link" onClick={e => handleImgClick(e)} key={i}>
         <div className="blur-wrapper-3">
-          <img alt={img.title} id={i} className="gallery-tile" src={require(`../../images/main/${img.link}.JPG`)}/>
+          <img
+            alt={img.title}
+            id={i}
+            className="gallery-tile"
+            src={require(`../../images/main/${img.link}.JPG`)}
+            onClick={e => handleImgClick(e)} key={i}
+          />
         </div>
-      </Link>
     )
   });
 
