@@ -4,10 +4,16 @@ import './Photo.scss';
 
 export const Photo = props => {
   const { image, changeImage } = props;
+  const url = `../../images/main/${image.link}.JPG`;
+
+  const photoWrapper = () => {
+    
+  };
 
   return (
     <div className="Photo">
-      <div className="blur-wrapper-3" styles={{backgroundImage: require(`../../images/main/${image.link}.JPG`)}}>
+      <div className="photo-back">
+
       </div>
     </div>
   )
