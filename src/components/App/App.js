@@ -27,9 +27,9 @@ class App extends Component {
     this.setState({selectedColor: hex});
   };
 
-  changeImage = img => {
+  changeImage = id => {
     this.setState({
-      selectedImg: img
+      selectedImg: images[id]
     });
   };
 
@@ -59,7 +59,12 @@ class App extends Component {
             handleImgClick={this.handleImgClick}
           />
         } />
-        <Route path="/photos/:id" render={() => <Photo />} />
+        <Route path="/photos/:id" render={() =>
+          <Photo
+            image={this.state.selectedImg}
+            changeImage={this.changeImage}
+          />
+        } />
       </div>
     );
   };
