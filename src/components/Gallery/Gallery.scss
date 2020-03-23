@@ -75,6 +75,9 @@
   &:hover {
     color: $main-accent-color;
   }
+  &:active {
+    text-decoration: underline;
+  }
   margin: 0;
 }
 
@@ -90,10 +93,11 @@
 
 .photo-wrapper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 20px;
-  grid-row-gap: 40px;
+  grid-template-columns: repeat(3, 400px);
+  grid-column-gap: 90px;
+  grid-row-gap: 50px;
   height: 100%;
+  justify-content: center;
   margin: {
     left: auto;
     right: auto;
@@ -117,9 +121,9 @@
   object-fit: cover;
   width: 400px;
   &:active {
-    border: 1px solid $main-accent-color;
+    filter: blur(2px);
   }
   &:hover {
-    filter: blur(2px);
+    border: 1px solid $main-accent-color;
   }
 }
