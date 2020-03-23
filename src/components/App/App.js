@@ -33,9 +33,9 @@ class App extends Component {
     });
   };
 
-  handleImgClick = id => {
+  handleImgClick = ({ target }) => {
+    const { id } = target;
     let selectedImg = images[id];
-    console.log(selectedImg);
     this.changeImage(selectedImg);
   };
 

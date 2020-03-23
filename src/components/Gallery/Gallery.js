@@ -5,10 +5,9 @@ import './Gallery.scss';
 
 export const Gallery = props => {
   const { images, handleImgClick } = props;
-  console.log(images);
   const imagesTiles = images.map((img, i) => {
     return (
-      <Link to={`/photos/${i + 1}`} className="photo-link" onClick={i => handleImgClick(i)} key={i}>
+      <Link to={`/photos/${i + 1}`} id={i} className="photo-link" onClick={e => handleImgClick(e)} key={i}>
         <div className="blur-wrapper-3">
           <img alt={img.title} id={i} className="gallery-tile" src={require(`../../images/main/${img.link}.JPG`)}/>
         </div>
