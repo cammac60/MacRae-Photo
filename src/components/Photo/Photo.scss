@@ -20,24 +20,37 @@
   width: 100%;
 }
 
-.port-wrap {
+.port-wrap, .landscape-wrap {
   display: flex;
   height: 100%;
   justify-content: space-between;
   width: 100%;
 }
 
-.landscape-photo {
+.port-photo {
   border: 2px solid $main-color;
   height: 100%;
 }
 
-.landscape-text-wrap {
+.landscape-photo {
+  border: 2px solid $main-color;
+  height: 75%;
+}
+
+.port-text-wrap {
   display: flex;
   flex-direction: column;
   height: 100%;
   justify-content: space-between;
   text-align: right;
+}
+
+.landscape-photo-wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  text-align: left;
 }
 
 .photo-title {
@@ -69,4 +82,9 @@
   }
   margin: 0;
   text-decoration: none;
+}
+
+#photo-back-btn {
+  margin-top: auto;
+  text-align: right;
 }

@@ -9,14 +9,21 @@ export const Photo = props => {
 
   let landscapeWrap =
     <div className="landscape-wrap">
-
+      <div className="landscape-photo-wrap">
+        <div className="landscape-title-wrap">
+          <h2 className="photo-title">{image.title}</h2>
+          <span className="photo-location">{image.location}</span>
+        </div>
+        <img alt={image.title} src={require(`../../images/main/${image.link}.JPG`)} className="landscape-photo"/>
+      </div>
+      <Link to="/gallery" className="photo-back-btn" id="photo-back-btn">Back</Link>
     </div>;
 
   let portWrap =
     <div className="port-wrap">
-      <img alt={image.title} src={require(`../../images/main/${image.link}.JPG`)} className="landscape-photo"/>
-      <div className="landscape-text-wrap">
-        <div className="landscape-title-wrap">
+      <img alt={image.title} src={require(`../../images/main/${image.link}.JPG`)} className="port-photo"/>
+      <div className="port-text-wrap">
+        <div className="port-title-wrap">
           <h2 className="photo-title">{image.title}</h2>
           <span className="photo-location">{image.location}</span>
         </div>
