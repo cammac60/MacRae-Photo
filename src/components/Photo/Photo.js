@@ -9,8 +9,8 @@ export const Photo = props => {
 
   const imageCtrl =
     <div className="image-ctrl">
-      <img className="arrow" src={require('../../images/icons/left-arrow.svg')} id="prev" alt="Previous icon"/>
-      <img className="arrow" src={require('../../images/icons/right-arrow.svg')} id="next" alt="Next icon"/>
+      <img className="arrow" src={require('../../images/icons/left-arrow.svg')} id="prev" alt="Previous icon" tooltip="Previous"/>
+      <img className="arrow" src={require('../../images/icons/right-arrow.svg')} id="next" alt="Next icon" tooltip="next"/>
     </div>;
 
   let landscapeWrap =
