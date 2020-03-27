@@ -69,7 +69,7 @@ export const images = [
     link: 'desert-road2',
     title: 'Fork in the Road',
     location: 'Canyonlands NP, Utah',
-    landscape: false
+    landscape: true
   },
   {
     link: 'glenwoodcanyon2',
