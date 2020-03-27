@@ -88,3 +88,27 @@
   margin-top: auto;
   text-align: right;
 }
+
+.image-ctrl {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  bottom: 0;
+  display: flex;
+  left: 0;
+  height: 30px;
+  justify-content: space-around;
+  margin: {
+    bottom: 2%;
+    left: 2%;
+    right: auto;
+    top: auto;
+  }
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60px;
+}
+
+.arrow {
+  height: 20px;
+}
