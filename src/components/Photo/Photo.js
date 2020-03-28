@@ -4,13 +4,12 @@ import { Link } from 'react-router-dom';
 import './Photo.scss';
 
 export const Photo = props => {
-  const { image, changeImage } = props;
-  const url = `../../images/main/${image.link}.JPG`;
+  const { image, changeImage, curImgId, handleArrowClick } = props;
 
   const imageCtrl =
     <div className="image-ctrl">
-      <img className="arrow" src={require('../../images/icons/left-arrow.svg')} id="prev" alt="Previous icon" tooltip="Previous"/>
-      <img className="arrow" src={require('../../images/icons/right-arrow.svg')} id="next" alt="Next icon" tooltip="next"/>
+      <img className="arrow" src={require('../../images/icons/left-arrow.svg')} id="prev" alt="Previous icon" tooltip="Previous" onClick={e => handleArrowClick(e, curImgId)}/>
+      <img className="arrow" src={require('../../images/icons/right-arrow.svg')} id="next" alt="Next icon" tooltip="Next" onClick={e => handleArrowClick(e, curImgId)}/>
     </div>;
 
   let landscapeWrap =
