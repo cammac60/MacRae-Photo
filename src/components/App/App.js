@@ -40,6 +40,11 @@ class App extends Component {
     this.props.history.push(`/photos/${parseInt(id) + 1}`);
   };
 
+  handleArrowClick = ({ target }, curPage) => {
+    const { id } = target;
+    console.log(id, curPage);
+  };
+
   render = () => {
 
     const { selectedColor, selectedImg } = this.state;
@@ -60,11 +65,13 @@ class App extends Component {
             handleImgClick={this.handleImgClick}
           />
         } />
-        <Route path="/photos/:id" render={() =>
+        <Route path="/photos/:id" render={({ match }) =>
           selectedImg ?
           <Photo
             image={selectedImg}
             changeImage={this.changeImage}
+            curImgId={match.params.id}
+            handleArrowClick={this.handleArrowClick}
           /> :
           <Loader />
         } />
