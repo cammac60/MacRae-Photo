@@ -72,6 +72,22 @@ class App extends Component {
     }
   };
 
+  validatePhotoUrl = ({ params }) => {
+    const { id } = params;
+    if (images[id - 1]) {
+      return (
+        <Photo
+          image={images[id - 1]}
+          changeImage={this.changeImage}
+          curImgId={id}
+          handleArrowClick={this.handleArrowClick}
+        />
+      )
+    } else {
+        this.props.history.push('/gallery');
+    }
+  };
+
   render = () => {
 
     const { selectedColor, selectedImg } = this.state;
@@ -93,14 +109,15 @@ class App extends Component {
           />
         } />
         <Route path="/photos/:id" render={({ match }) =>
-          selectedImg ?
+
+          selectedImg.link ?
           <Photo
             image={selectedImg}
             changeImage={this.changeImage}
             curImgId={match.params.id}
             handleArrowClick={this.handleArrowClick}
           /> :
-          <Loader />
+          this.validatePhotoUrl(match)
         } />
       </div>
     );
