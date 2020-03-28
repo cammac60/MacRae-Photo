@@ -57,21 +57,18 @@ class App extends Component {
   handleArrowClick = ({ target }, curPage) => {
     const { id } = target;
     const positionCheck = this.checkImgPosition(id, curPage);
-    let index;
+    let page = parseInt(curPage);
     if (positionCheck === 0 || positionCheck) {
       this.changeImage(positionCheck);
-      this.changePage(parseInt(index) + 1);
+      this.changePage(positionCheck + 1);
       return;
-    }
-    if (parseInt(curPage) !== 1 && id === 'prev') {
-        index = parseInt(curPage) - 2;
-        this.changeImage(index);
-        this.changePage(parseInt(index) + 1);
+    } if (page !== 1 && id === 'prev') {
+        this.changeImage(page - 2);
+        this.changePage(page - 1);
         return;
     } else {
-        index = parseInt(curPage);
-        this.changeImage(index);
-        this.changePage(parseInt(index) + 1);
+        this.changeImage(page);
+        this.changePage(page + 1);
     }
   };
 
