@@ -40,9 +40,39 @@ class App extends Component {
     this.props.history.push(`/photos/${parseInt(id) + 1}`);
   };
 
+  checkImgPosition = (id, page) => {
+    if (parseInt(page) === 1 && id === 'prev') {
+      return images.length - 1;
+    } if (parseInt(page) === images.length && id === 'next') {
+        return 0;
+    } else {
+        return false;
+    }
+  };
+
+  changePage = num => {
+    this.props.history.push(`/photos/${num}`);
+  };
+
   handleArrowClick = ({ target }, curPage) => {
     const { id } = target;
-    console.log(id, curPage);
+    const positionCheck = this.checkImgPosition(id, curPage);
+    let index;
+    if (positionCheck === 0 || positionCheck) {
+      this.changeImage(positionCheck);
+      this.changePage(parseInt(index) + 1);
+      return;
+    }
+    if (parseInt(curPage) !== 1 && id === 'prev') {
+        index = parseInt(curPage) - 2;
+        this.changeImage(index);
+        this.changePage(parseInt(index) + 1);
+        return;
+    } else {
+        index = parseInt(curPage);
+        this.changeImage(index);
+        this.changePage(parseInt(index) + 1);
+    }
   };
 
   render = () => {
