@@ -109,7 +109,6 @@ class App extends Component {
           />
         } />
         <Route path="/photos/:id" render={({ match }) =>
-
           selectedImg.link ?
           <Photo
             image={selectedImg}
