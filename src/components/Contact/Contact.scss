@@ -30,7 +30,7 @@
   display: flex;
   flex-direction: column;
   height: 675px;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: {
     right: auto;
     top: auto;
@@ -38,4 +38,37 @@
   overflow: visible;
   padding: 2%;
   width: 95%;
+}
+
+.email-input-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+  width: 90%;
+}
+
+.input-label {
+  font: {
+    size: 2rem;
+    weight: 300;
+  }
+  margin-right: 20px;
+}
+
+.contact-input {
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid $main-color;
+  font: {
+    size: 1.6rem;
+    weight: 300;
+  }
+  padding: 10px;
+}
+
+#email {
+  height: 100%;
+  width: 300px;
 }
