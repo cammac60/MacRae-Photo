@@ -29,7 +29,7 @@
   border: 1px solid $main-color;
   display: flex;
   flex-direction: column;
-  height: 675px;
+  height: 750px;
   justify-content: space-between;
   margin: {
     right: auto;
@@ -65,10 +65,26 @@
     size: 1.6rem;
     weight: 300;
   }
+  outline: none;
   padding: 10px;
 }
 
 #email {
   height: 100%;
   width: 300px;
+}
+
+.message-input-wrapper {
+  align-items: flex-start;
+  display: flex;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+  width: 90%;
+}
+
+#message {
+  height: 300px;
+  width: 90%;
 }

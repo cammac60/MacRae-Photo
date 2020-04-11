@@ -35,7 +35,9 @@ export class Contact extends Component {
                 <Link to="/" className="back-btn">Back</Link>
               </div>
               <div className="message-input-wrapper">
-              test
+                <label for="message" className="input-label">Message:</label>
+                <textarea className="contact-input" id="message" value={this.state.message} onChange={e => this.handleChange(e)}>
+                </textarea>
               </div>
               <div className="title-input-wrapper">
               test
