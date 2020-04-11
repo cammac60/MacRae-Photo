@@ -27,7 +27,10 @@
   }
   background-blend-mode: darken;
   border: 1px solid $main-color;
+  display: flex;
+  flex-direction: column;
   height: 675px;
+  justify-content: space-around;
   margin: {
     right: auto;
     top: auto;
