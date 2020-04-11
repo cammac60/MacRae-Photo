@@ -15,12 +15,31 @@ export class Contact extends Component {
     }
   }
 
+  handleChange = ({ target }) => {
+    const { id } = target;
+    const { value } = target;
+    this.setState({[id]: value})
+    console.log(this.state);
+  };
+
   render  = () => {
     return (
       <div className="Contact">
         <div className="contact-back">
           <div className="blur-wrapper">
             <div className="contact-wrapper">
+              <div className="email-input-wrapper">
+                <div className="email-section">
+                  <label for="email" className="input-label">Email:</label>
+                  <input className="contact-input" id="email" value={this.state.email} onChange={e => this.handleChange(e)}/>
+                </div>
+              </div>
+              <div className="message-input-wrapper">
+              test
+              </div>
+              <div className="title-input-wrapper">
+              test
+              </div>
             </div>
           </div>
         </div>
