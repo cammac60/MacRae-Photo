@@ -19,7 +19,6 @@ export class Contact extends Component {
     const { id } = target;
     const { value } = target;
     this.setState({[id]: value})
-    console.log(this.state);
   };
 
   render  = () => {
@@ -33,6 +32,7 @@ export class Contact extends Component {
                   <label for="email" className="input-label">Email:</label>
                   <input className="contact-input" id="email" value={this.state.email} onChange={e => this.handleChange(e)}/>
                 </div>
+                <Link to="/" className="back-btn">Back</Link>
               </div>
               <div className="message-input-wrapper">
               test
