@@ -21,6 +21,18 @@ export class Contact extends Component {
     this.setState({[id]: value})
   };
 
+  validateEmail = () => {
+    return /\S+@\S+\.\S+/.test(this.state.email);
+  };
+
+  validateSubmit = () => {
+    if (this.validateEmail() && this.state.message) {
+      console.log('yep');
+    } else {
+        console.log('nah');
+    }
+  };
+
   render  = () => {
     return (
       <div className="Contact">
@@ -41,7 +53,7 @@ export class Contact extends Component {
               </div>
               <div className="title-input-wrapper">
                 <h2 className="contact-header">Contact</h2>
-                <button className="message-btn">Send</button>
+                <button className="message-btn" onClick={() => this.validateSubmit()}>Send</button>
               </div>
             </div>
           </div>
