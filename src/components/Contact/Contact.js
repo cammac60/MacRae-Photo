@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import './Contact.scss';
 
-import { sendMessage } from '../../apiCalls';
+import { postMessage } from '../../apiCalls';
 
 export class Contact extends Component {
 
@@ -40,6 +40,17 @@ export class Contact extends Component {
     }
   };
 
+  handleSubmit = async () => {
+    const { email, message } = this.state;
+    if (this.validateSubmit()) {
+      try {
+        const response = await postMessage(email, message);
+      } catch(error) {
+          console.log(error);
+      }
+    }
+  };
+
   render  = () => {
     return (
       <div className="Contact">
@@ -61,7 +72,7 @@ export class Contact extends Component {
               <span className="form-error">{this.state.error}</span>
               <div className="title-input-wrapper">
                 <h2 className="contact-header">Contact</h2>
-                <button className="message-btn" onClick={() => this.validateSubmit()}>Send</button>
+                <button className="message-btn" onClick={() => this.handleSubmit()}>Send</button>
               </div>
             </div>
           </div>

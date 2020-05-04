@@ -2,7 +2,7 @@ export const postMessage = async (email, message) => {
   const url = 'https://marcaephoto.herokuapp.com/api/v1/messages';
   const payload = {
     method: 'POST',
-    body: JSON.stringify({email, message}),
+    body: JSON.stringify({email, body: message}),
     headers: {
       'Content-Type': 'application/json'
     }
