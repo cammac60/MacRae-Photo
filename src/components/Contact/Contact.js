@@ -42,7 +42,7 @@ export class Contact extends Component {
               <div className="email-input-wrapper">
                 <div className="email-section">
                   <label for="email" className="input-label">Email:</label>
-                  <input className="contact-input" id="email" value={this.state.email} onChange={e => this.handleChange(e)}/>
+                  <input className="contact-input" id="email" value={this.state.email} onChange={e => this.handleChange(e)} autocomplete="off"/>
                 </div>
                 <Link to="/" className="back-btn">Back</Link>
               </div>
