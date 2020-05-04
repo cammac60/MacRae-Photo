@@ -19,7 +19,11 @@ export class Contact extends Component {
   handleChange = ({ target }) => {
     const { id } = target;
     const { value } = target;
-    this.setState({[id]: value})
+    const { message } = this.state;
+    this.setState({[id]: value});
+    if (this.validateEmail() && message) {
+      this.setState({error: ''});
+    }
   };
 
   validateEmail = () => {
@@ -28,10 +32,11 @@ export class Contact extends Component {
 
   validateSubmit = () => {
     if (this.validateEmail() && this.state.message) {
-      console.log('yep');
+      this.setState({error: ''});
+      return true;
     } else {
-        console.log('nah');
         this.setState({error: 'Please enter a message and a valid email.'});
+        return false;
     }
   };
 
