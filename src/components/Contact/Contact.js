@@ -12,7 +12,7 @@ export class Contact extends Component {
     this.state = {
       email: '',
       message: '',
-      error: '',
+      error: ''
     }
   }
 
@@ -45,11 +45,20 @@ export class Contact extends Component {
     if (this.validateSubmit()) {
       try {
         const response = await postMessage(email, message);
+        this.clearState();
       } catch(error) {
           console.log(error);
           this.setState({error: 'There was a problem sending your message - Please try again.'});
       }
     }
+  };
+
+  clearState = () => {
+    this.setState({
+      email: '',
+      message: '',
+      error: ''
+    });
   };
 
   render  = () => {
