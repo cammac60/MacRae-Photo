@@ -11,7 +11,8 @@ export class Contact extends Component {
     super();
     this.state = {
       email: '',
-      message: ''
+      message: '',
+      error: '',
     }
   }
 
@@ -30,6 +31,7 @@ export class Contact extends Component {
       console.log('yep');
     } else {
         console.log('nah');
+        this.setState({error: 'Please enter a message and a valid email.'});
     }
   };
 
@@ -51,6 +53,7 @@ export class Contact extends Component {
                 <textarea className="contact-input" id="message" value={this.state.message} onChange={e => this.handleChange(e)}>
                 </textarea>
               </div>
+              <span className="form-error">{this.state.error}</span>
               <div className="title-input-wrapper">
                 <h2 className="contact-header">Contact</h2>
                 <button className="message-btn" onClick={() => this.validateSubmit()}>Send</button>

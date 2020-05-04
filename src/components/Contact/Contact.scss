@@ -129,3 +129,11 @@
     background-color: $secondary-accent-1;
   }
 }
+
+.form-error {
+  color: red;
+  font: {
+    size: 1.4rem;
+    weight: 300;
+  }
+}
