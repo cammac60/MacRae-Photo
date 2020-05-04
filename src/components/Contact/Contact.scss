@@ -88,3 +88,41 @@
   height: 300px;
   width: 90%;
 }
+
+.title-input-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+  width: 90%;
+}
+
+.contact-header {
+  font: {
+    family: $large-font;
+    size: 5rem;
+    weight: normal;
+  }
+}
+
+.message-btn {
+  background-color: $main-accent-color;
+  border: none;
+  color: #000000;
+  font: {
+    size: 1.4rem;
+    weight: 300;
+  }
+  height: 50px;
+  padding: 10px;
+  margin: {
+    bottom: auto;
+    top: auto;
+  }
+  outline: none;
+  &:active {
+    background-color: $secondary-accent-1;
+  }
+}

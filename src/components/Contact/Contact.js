@@ -40,7 +40,8 @@ export class Contact extends Component {
                 </textarea>
               </div>
               <div className="title-input-wrapper">
-              test
+                <h2 className="contact-header">Contact</h2>
+                <button className="message-btn">Send</button>
               </div>
             </div>
           </div>
