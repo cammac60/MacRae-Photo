@@ -7,6 +7,9 @@ export const Popup = () => {
 
   return (
     <div className="Popup">
+      <div className="popup-inner">
+      Text
+      </div>
     </div>
   )
 

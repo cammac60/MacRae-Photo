@@ -67,6 +67,7 @@ export class Contact extends Component {
   render  = () => {
     return (
       <div className="Contact">
+        {this.state.popUpEnabled ? <Popup /> : null}
         <div className="contact-back">
           <div className="blur-wrapper">
             <div className="contact-wrapper">

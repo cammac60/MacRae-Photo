@@ -1,0 +1,19 @@
+@import '../../variables.scss';
+
+.Popup {
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.popup-inner {
+  background-color: #000000;
+  border: 1px solid $main-accent-color;
+  height: 50%;
+  left: 20%;
+  position: absolute;
+  top: 25%;
+  width: 60%;
+}
