@@ -23,7 +23,6 @@ export class Contact extends Component {
     const { id, value } = target;
     const { message } = this.state;
     this.setState({[id]: value});
-    console.log(this.state);
     if (this.validateEmail()) {
       this.setState({error: ''});
     }
