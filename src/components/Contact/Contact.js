@@ -5,6 +5,8 @@ import './Contact.scss';
 
 import { postMessage } from '../../apiCalls';
 
+import { Popup } from '../Popup/Popup';
+
 export class Contact extends Component {
 
   constructor() {
@@ -12,15 +14,16 @@ export class Contact extends Component {
     this.state = {
       email: '',
       message: '',
-      error: ''
+      error: '',
+      popUpEnabled: false
     }
   }
 
   handleChange = ({ target }) => {
-    const { id } = target;
-    const { value } = target;
+    const { id, value } = target;
     const { message } = this.state;
     this.setState({[id]: value});
+    console.log(this.state);
     if (this.validateEmail()) {
       this.setState({error: ''});
     }
@@ -57,7 +60,8 @@ export class Contact extends Component {
     this.setState({
       email: '',
       message: '',
-      error: ''
+      error: '',
+      popUpEnabled: true
     });
   };
 
