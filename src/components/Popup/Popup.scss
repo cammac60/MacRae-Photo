@@ -11,6 +11,9 @@
 .popup-inner {
   background-color: #000000;
   border: 1px solid $main-accent-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   height: 50%;
   left: 20%;
   position: absolute;
@@ -19,5 +22,53 @@
 }
 
 .exit-btn {
+  cursor: pointer;
+  display: block;
+  margin: {
+    left: auto;
+    right: 2%;
+    top: 2%;
+  }
   width: 3%;
+  &:active {
+    background-color: grey;
+  }
+}
+
+.popup-header {
+  color: $main-accent-color;
+  font: {
+    family: $large-font;
+    size: 3rem;
+    weight: normal;
+  }
+  margin-top: 5%;
+}
+
+.popup-desc {
+  font: {
+    size: 1.4rem;
+    weight: 300;
+  }
+  margin-top: 7%;
+}
+
+.popup-back-link {
+  font: {
+    size: 1.5rem;
+    weight: 300;
+  }
+  margin: {
+    bottom: 2%;
+    left: auto;
+    right: 2%;
+    top: auto;
+  }
+  text-decoration: none;
+  &:active {
+    text-decoration: underline;
+  }
+  &:hover {
+    color: $main-accent-color;
+  }
 }

@@ -11,7 +11,7 @@ export const Popup = () => {
         <img src={require('../../images/icons/cancel.svg')} className="exit-btn"/>
         <h5 className="popup-header">Thank you for your message!</h5>
         <span className="popup-desc">Please expect a reply to the provided email in 3-5 business days</span>
-        <Link className="popup-back-link">Back to Home</Link>
+        <Link className="popup-back-link" to="/">Back to Home</Link>
       </div>
     </div>
   )
