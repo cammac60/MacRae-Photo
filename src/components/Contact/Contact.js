@@ -64,10 +64,14 @@ export class Contact extends Component {
     });
   };
 
+  closePopup = () => {
+    this.setState({popUpEnabled: false});
+  };
+
   render  = () => {
     return (
       <div className="Contact">
-        {this.state.popUpEnabled ? <Popup /> : null}
+        {this.state.popUpEnabled ? <Popup closePopup={this.closePopup}/> : null}
         <div className="contact-back">
           <div className="blur-wrapper">
             <div className="contact-wrapper">
