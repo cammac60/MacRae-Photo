@@ -21,7 +21,7 @@ export class Contact extends Component {
     const { value } = target;
     const { message } = this.state;
     this.setState({[id]: value});
-    if (this.validateEmail() && message) {
+    if (this.validateEmail()) {
       this.setState({error: ''});
     }
   };
