@@ -5,15 +5,12 @@ import { App } from './App.js';
 describe('App', () => {
 
   const push = jest.fn();
-
   let wrapper, instance;
-
   const mockEvent = {
     target: {
       id: '4'
     }
   };
-
   const mockProps = {
     history: {
       push
@@ -27,6 +24,29 @@ describe('App', () => {
 
   it('Should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot();
+  });
+
+  describe('changeColor', () => {
+
+    it('Should change the selectedColor in state', () => {
+      instance.changeColor('#000000');
+      expect(instance.state.selectedColor).toBe('#000000');
+    });
+
+  });
+
+  describe('changeImage', () => {
+
+    it('Should change the image link', () => {
+      instance.changeImage(0);
+      expect(instance.state.selectedImg).toEqual({
+        "landscape": false,
+        "link": "25",
+        "location": "Denver, Colorado",
+        "title": "Rush Hour"
+      });
+    });
+
   });
 
   describe('handleImgClick', () => {
