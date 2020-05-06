@@ -15,4 +15,11 @@ describe('Contact', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+
+  describe('handleChange', () => {
+
+    it('Should change state based on ')
+  });
+
+
 });

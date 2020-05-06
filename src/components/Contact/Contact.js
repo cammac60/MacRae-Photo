@@ -21,7 +21,6 @@ export class Contact extends Component {
 
   handleChange = ({ target }) => {
     const { id, value } = target;
-    const { message } = this.state;
     this.setState({[id]: value});
     if (this.validateEmail()) {
       this.setState({error: ''});
