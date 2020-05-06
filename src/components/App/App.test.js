@@ -142,7 +142,7 @@ describe('App', () => {
           id: 200
         }
       };
-      const elem = instance.validatePhotoUrl(mockParams);
+      instance.validatePhotoUrl(mockParams);
       expect(instance.props.history.push).toHaveBeenCalledWith('/gallery');
     });
 
