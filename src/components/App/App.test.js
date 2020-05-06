@@ -59,4 +59,23 @@ describe('App', () => {
 
   });
 
+  describe('checkImgPosition', () => {
+
+    it('Should return the length of the images array minus 1 if the page is one and the id is prev', () => {
+      const num = instance.checkImgPosition('prev', 1);
+      expect(num).toEqual(38);
+    });
+
+    it('Should return 0 if the page is equal to the length of the images array and the id is next', () => {
+      const num = instance.checkImgPosition('next', 39);
+      expect(num).toEqual(0);
+    });
+
+    it('Should return false if none of the previous conditions are met', () => {
+      const num = instance.checkImgPosition('prev', 39);
+      expect(num).toBe(false);
+    });
+
+  });
+
 });
