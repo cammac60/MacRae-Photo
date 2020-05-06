@@ -8,7 +8,7 @@ describe('App', () => {
   let wrapper, instance;
   const mockEvent = {
     target: {
-      id: '4'
+      id: 'prev'
     }
   };
   const mockProps = {
@@ -26,6 +26,7 @@ describe('App', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+
   describe('changeColor', () => {
 
     it('Should change the selectedColor in state', () => {
@@ -34,6 +35,7 @@ describe('App', () => {
     });
 
   });
+
 
   describe('changeImage', () => {
 
@@ -49,15 +51,17 @@ describe('App', () => {
 
   });
 
+
   describe('handleImgClick', () => {
 
     it('Should call the changeImage method with the correct argument', () => {
       instance.changeImage = jest.fn();
       instance.handleImgClick(mockEvent);
-      expect(instance.changeImage).toHaveBeenCalledWith('4');
+      expect(instance.changeImage).toHaveBeenCalledWith('prev');
     });
 
   });
+
 
   describe('checkImgPosition', () => {
 
@@ -77,5 +81,47 @@ describe('App', () => {
     });
 
   });
+
+
+  describe('handleArrowClick', () => {
+
+    it('Should call changeImage with an argument of 0 and changePage with an argument of 1 if the id is next and the current page is equal to the length of the images array', () => {
+      instance.changeImage = jest.fn();
+      instance.changePage = jest.fn();
+      instance.handleArrowClick({
+        target: {
+          id: 'next'
+        }
+      }, 39);
+      expect(instance.changeImage).toHaveBeenCalledWith(0);
+      expect(instance.changePage).toHaveBeenCalledWith(1);
+    });
+
+    it('Should call changeImage with an argument of page -2 and changePage with page - 1 if the page does not equal 1 and the id equals prev', () => {
+      instance.changeImage = jest.fn();
+      instance.changePage = jest.fn();
+      instance.handleArrowClick({
+        target: {
+          id: 'prev'
+        }
+      }, 39);
+      expect(instance.changeImage).toHaveBeenCalledWith(37);
+      expect(instance.changePage).toHaveBeenCalledWith(38);
+    });
+
+    it('Should call pass the curPage argument to changeImage and the curPage argument + 1 to changePage in any other circumstance', () => {
+      instance.changeImage = jest.fn();
+      instance.changePage = jest.fn();
+      instance.handleArrowClick({
+        target: {
+          id: 'next'
+        }
+      }, 22);
+      expect(instance.changeImage).toHaveBeenCalledWith(22);
+      expect(instance.changePage).toHaveBeenCalledWith(23);
+    });
+
+  });
+
 
 });
