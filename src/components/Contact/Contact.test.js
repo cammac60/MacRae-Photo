@@ -45,4 +45,25 @@ describe('Contact', () => {
   });
 
 
+  describe('validateEmail', () => {
+
+    it('Should return true if a valid email is in state', () => {
+      instance.handleChange(mockEvent);
+      expect(instance.validateEmail()).toEqual(true);
+    });
+
+    it('Should return false if an invalid email is in state', () => {
+      const mockEventTwo = {
+        target: {
+          id: 'email',
+          value: 'test@'
+        }
+      };
+      instance.handleChange(mockEventTwo);
+      expect(instance.validateEmail()).toEqual(false);
+    });
+
+  });
+
+
 });
