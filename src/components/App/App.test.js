@@ -124,4 +124,29 @@ describe('App', () => {
   });
 
 
+  describe('validatePhotoUrl', () => {
+
+    it('Should return a JSX photo element if the image exists', () => {
+      const mockParams = {
+        params: {
+          id: 20
+        }
+      };
+      const elem = instance.validatePhotoUrl(mockParams);
+      expect(elem).toBeDefined();
+    });
+
+    it('Should call props.history.push with the corrrect argument if the image does not exist', () => {
+      const mockParams = {
+        params: {
+          id: 200
+        }
+      };
+      const elem = instance.validatePhotoUrl(mockParams);
+      expect(instance.props.history.push).toHaveBeenCalledWith('/gallery');
+    });
+
+  });
+
+
 });
