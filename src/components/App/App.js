@@ -112,7 +112,6 @@ export class App extends Component {
           selectedImg.link ?
           <Photo
             image={selectedImg}
-            changeImage={this.changeImage}
             curImgId={match.params.id}
             handleArrowClick={this.handleArrowClick}
           /> :
