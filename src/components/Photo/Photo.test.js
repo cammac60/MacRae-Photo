@@ -18,6 +18,11 @@ describe('Photo', () => {
       landscape: false
     }
   };
+  let mockEvent = {
+    target: {
+      id: 'prev'
+    }
+  };
 
   beforeEach(() => {
     wrapper = shallow(<Photo {...mockProps}/>);
@@ -28,5 +33,14 @@ describe('Photo', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('Should call handleArrowClick with the correct arguments when the back button is clicked', () => {
+    wrapper.find('#prev').simulate('click', mockEvent);
+    expect(handleArrowClick).toHaveBeenCalledWith(mockEvent, 1);
+  });
+
+  it('Should call handleArrowClick with the correct arguments when the next button is clicked', () => {
+    wrapper.find('#next').simulate('click', mockEvent);
+    expect(handleArrowClick).toHaveBeenCalledWith(mockEvent, 1);
+  });
 
 });
