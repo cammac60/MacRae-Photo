@@ -65,5 +65,45 @@ describe('Contact', () => {
 
   });
 
+  describe('validateSubmit', () => {
+
+    it('Should return true and clear the error message if a valid email and a message are in state', () => {
+      instance.state = {
+        email: 'test@test.test',
+        message: 'test',
+        error: 'error',
+        popUpEnabled: false
+      };
+      instance.validateSubmit();
+      expect(instance.validateSubmit()).toBeTruthy();
+      expect(instance.state.error).toEqual('');
+    });
+
+    it('Should add the correct error message to state and return false if the email address is invalid', () => {
+      instance.state = {
+        email: 'test@t',
+        message: 'test',
+        error: '',
+        popUpEnabled: false
+      };
+      instance.validateSubmit();
+      expect(instance.validateSubmit()).toBeFalsy();
+      expect(instance.state.error).toEqual('Please enter a message and a valid email.');
+    });
+
+    it('Should add the correct error message to state and return false if the message is not entered', () => {
+      instance.state = {
+        email: 'test@test.test',
+        message: '',
+        error: '',
+        popUpEnabled: false
+      };
+      instance.validateSubmit();
+      expect(instance.validateSubmit()).toBeFalsy();
+      expect(instance.state.error).toEqual('Please enter a message and a valid email.');
+    });
+
+  });
+
 
 });
