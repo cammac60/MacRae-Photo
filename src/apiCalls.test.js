@@ -5,7 +5,7 @@ describe('POST', () => {
   const mockDesc = 'test desc';
   const mockPayload = {
     method: 'POST',
-    body: JSON.stringify({email: mockEmail, message: mockDesc}),
+    body: JSON.stringify({email: mockEmail, body: mockDesc}),
     headers: {
       'Content-Type': 'application/json'
     }
