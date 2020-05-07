@@ -47,6 +47,7 @@ export class Contact extends Component {
       try {
         const response = await postMessage(email, message);
         this.clearState();
+        return response;
       } catch(error) {
           console.log(error);
           this.setState({error: 'There was a problem sending your message - Please try again.'});
