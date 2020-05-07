@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './Photo.scss';
 
 export const Photo = props => {
-  const { image, changeImage, curImgId, handleArrowClick } = props;
+  const { image, curImgId, handleArrowClick } = props;
 
   const imageCtrl =
     <div className="image-ctrl">
