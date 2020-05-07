@@ -145,4 +145,41 @@ describe('Contact', () => {
   });
 
 
+  describe('clearState', () => {
+
+    it('Should clear the state and change popUpEnabled to true', () => {
+      instance.state = {
+        email: 'test@test.test',
+        message: 'test',
+        error: 'error',
+        popUpEnabled: false
+      };
+      instance.clearState();
+      expect(instance.state).toEqual({
+        email: '',
+        message: '',
+        error: '',
+        popUpEnabled: true
+      });
+    });
+
+  });
+
+
+  describe('closePopup', () => {
+
+    it('Should change popUpEnabled to false', () => {
+      instance.state = {
+        email: '',
+        message: '',
+        error: '',
+        popUpEnabled: true
+      };
+      instance.closePopup();
+      expect(instance.state.popUpEnabled).toBeFalsy();
+    });
+
+  });
+
+
 });
