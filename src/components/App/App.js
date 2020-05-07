@@ -93,7 +93,7 @@ export class App extends Component {
     const { selectedColor, selectedImg } = this.state;
 
     return (
-      <div className="App">
+      <div className="App" onContextMenu={(e)=> e.preventDefault()}>
         <Route exact path="/" render={()=>
           <Splash
           selectedColor={selectedColor}
