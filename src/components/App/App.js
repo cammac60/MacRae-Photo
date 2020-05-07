@@ -7,7 +7,6 @@ import { Gallery } from '../Gallery/Gallery';
 import { Photo } from '../Photo/Photo';
 import { About } from '../About/About';
 import { Splash } from '../Splash/Splash';
-import { Loader } from '../Loader/Loader';
 
 import { images } from '../../data';
 
