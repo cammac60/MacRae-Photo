@@ -2,6 +2,10 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Contact from './Contact';
 
+import { postMessage } from '../../apiCalls';
+
+jest.mock('../../apiCalls');
+
 describe('Contact', () => {
 
   let wrapper, instance;
@@ -16,6 +20,9 @@ describe('Contact', () => {
   beforeEach(() => {
     wrapper = shallow(<Contact />);
     instance = wrapper.instance();
+    postMessage.mockImplementation(() => {
+      return Promise.resolve({id: 1});
+    });
   });
 
   it('Should match the snapshot', () => {
@@ -65,6 +72,7 @@ describe('Contact', () => {
 
   });
 
+
   describe('validateSubmit', () => {
 
     it('Should return true and clear the error message if a valid email and a message are in state', () => {
@@ -101,6 +109,37 @@ describe('Contact', () => {
       instance.validateSubmit();
       expect(instance.validateSubmit()).toBeFalsy();
       expect(instance.state.error).toEqual('Please enter a message and a valid email.');
+    });
+
+  });
+
+
+  describe('handleSubmit', () => {
+
+    it('Should call clearState if the submission is validated and the promise resolves.', async () => {
+      instance.state = {
+        email: 'test@test.test',
+        message: 'test',
+        error: '',
+        popUpEnabled: false
+      };
+      instance.clearState = jest.fn();
+      await instance.handleSubmit();
+      expect(instance.clearState).toHaveBeenCalled();
+    });
+
+    it('Should add the correct error message to state if the promise rejects', async () => {
+      instance.state = {
+        email: 'test@test.test',
+        message: 'test',
+        error: '',
+        popUpEnabled: false
+      };
+      postMessage.mockImplementation(() => {
+        return Promise.reject();
+      });
+      await instance.handleSubmit();
+      expect(instance.state.error).toEqual('There was a problem sending your message - Please try again.');
     });
 
   });
