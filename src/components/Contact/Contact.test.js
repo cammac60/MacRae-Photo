@@ -29,6 +29,24 @@ describe('Contact', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('Should invoke the handleChange on keyup of the email field', () => {
+    instance.handleChange = jest.fn();
+    wrapper.find('#email').simulate('change', mockEvent);
+    expect(instance.handleChange).toHaveBeenCalled();
+  });
+
+  it('Should invoke the handleChange method on keyup of the message field', () => {
+    instance.handleChange = jest.fn();
+    wrapper.find('#message').simulate('change', mockEvent);
+    expect(instance.handleChange).toHaveBeenCalled();
+  });
+
+  it('Should invoke the handle submit method onClick of the submit button', () => {
+    instance.handleSubmit = jest.fn();
+    wrapper.find('.message-btn').simulate('click');
+    expect(instance.handleSubmit).toHaveBeenCalled();
+  });
+
 
   describe('handleChange', () => {
 
