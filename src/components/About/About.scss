@@ -60,6 +60,7 @@
 }
 
 .bio-text-wrapper {
+  display: block;
   font: {
     size: 1.4rem;
     weight: 300;
@@ -101,5 +102,56 @@
   }
   &:hover {
     color: $secondary-accent-1;
+  }
+}
+
+@media (max-width: 1150px) {
+  .bio-text {
+    font-size: 1.2rem;
+  }
+  .profile-img {
+    height: 450px;
+  }
+  .bio-name {
+    font-size: 4rem;
+  }
+  .bio-footer {
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 1025px) {
+  .bio-text {
+    font-size: 1.1rem;
+  }
+  .profile-img {
+    height: 400px;
+  }
+}
+
+@media (max-width: 900px) {
+  .bio-text {
+    font-size: 0.9rem;
+  }
+  .profile-img {
+    height: 350px;
+  }
+  .bio-footer {
+    margin-top: 200px;
+  }
+}
+
+@media (max-width: 740px) {
+  .bio-text {
+    font-size: 0.7rem;
+  }
+  .profile-img {
+    height: 300px;
+  }
+  .bio-footer {
+    margin-top: 250px;
+  }
+  .bio-name {
+    font-size: 3rem;
   }
 }
