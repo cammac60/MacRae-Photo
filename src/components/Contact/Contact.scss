@@ -138,3 +138,21 @@
   }
   height: 27px;
 }
+
+@media (max-width: 800px) {
+  #message {
+    height: 350px;
+  }
+}
+
+@media (max-width: 690px) {
+  #email {
+    width: 200px;
+  }
+}
+
+@media (max-width: 550px) {
+  #email {
+    width: 150px;
+  }
+}
