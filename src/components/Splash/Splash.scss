@@ -106,3 +106,27 @@ h1 {
   margin-left: auto;
   width: 100%;
 }
+
+@media (max-width: 899px) {
+  h1 {
+    font-size: 6rem;
+  }
+}
+
+@media (max-width: 795px) {
+  h1 {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 689px) {
+  h1 {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 584px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
