@@ -127,3 +127,81 @@
     border: 1px solid $main-accent-color;
   }
 }
+
+@media (max-width: 1300px) {
+  .photo-wrapper {
+    grid-template-columns: repeat(3, 300px);
+    grid-column-gap: 22.5px;
+    grid-row-gap: 12.5px;
+  }
+  .gallery-tile {
+    height: 300px;
+    width: 300px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .photo-wrapper {
+    grid-template-columns: repeat(3, 200px);
+    grid-column-gap: 15px;
+    grid-row-gap: 8.5px;
+  }
+  .gallery-tile {
+    height: 200px;
+    width: 200px;
+  }
+}
+
+@media (max-width: 660px) {
+  .photo-wrapper {
+    grid-template-columns: repeat(3, 150px);
+    grid-column-gap: 12px;
+    grid-row-gap: 6px;
+  }
+  .gallery-tile {
+    height: 150px;
+    width: 150px;
+  }
+  .ig-logo-2 {
+    height: 40px;
+    width: 40px;
+  }
+  .gallery-header {
+    
+  }
+}
+
+@media (max-width: 494px) {
+  .photo-wrapper {
+    grid-template-columns: repeat(3, 120px);
+    grid-column-gap: 12px;
+    grid-row-gap: 6px;
+  }
+  .gallery-tile {
+    height: 120px;
+    width: 120px;
+  }
+  .ig-logo-2 {
+    height: 30px;
+    width: 30px;
+  }
+  .gallery-title {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 405px) {
+  .photo-wrapper {
+    grid-template-columns: repeat(3, 100px);
+    grid-column-gap: 8.5px;
+    grid-row-gap: 4.5px;
+  }
+  .gallery-tile {
+    height: 100px;
+    width: 100px;
+  }
+  .ig-logo-2 {
+    height: 20px;
+    width: 20px;
+  }
+}
