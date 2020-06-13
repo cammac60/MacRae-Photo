@@ -167,7 +167,7 @@
     width: 40px;
   }
   .gallery-header {
-    
+    background-position: 40% 12%;
   }
 }
 
@@ -188,6 +188,9 @@
   .gallery-title {
     font-size: 4rem;
   }
+  #gallery-back-btn {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 405px) {
@@ -203,5 +206,11 @@
   .ig-logo-2 {
     height: 20px;
     width: 20px;
+  }
+  .gallery-header {
+    background-position: 30% 12%;
+  }
+  #gallery-back-btn {
+    font-size: 1.5rem;
   }
 }
