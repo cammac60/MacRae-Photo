@@ -22,7 +22,7 @@ export const Photo = props => {
         <img alt={image.title} src={require(`../../images/main/${image.link}.JPG`)} className="landscape-photo"/>
         {imageCtrl}
       </div>
-      <Link to="/gallery" className="photo-back-btn" id="photo-back-btn">Back</Link>
+      <Link to="/gallery" className="photo-back-btn" id="landscape-back-btn">Back</Link>
     </div>;
 
   let portWrap =
