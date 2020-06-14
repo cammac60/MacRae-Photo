@@ -146,3 +146,39 @@
     height: 90%;
   }
 }
+
+@media (max-width: 710px) {
+  .photo-location {
+    font-size: 1.2rem;
+  }
+  .port-photo {
+    height: 75%;
+  }
+  .photo-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .photo-location {
+    font-size: 1rem;
+  }
+  .port-photo {
+    height: 70%;
+  }
+  .photo-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .photo-location {
+    font-size: 0.8rem;
+  }
+  .port-photo {
+    height: 60%;
+  }
+  .photo-title {
+    font-size: 1rem;
+  }
+}
