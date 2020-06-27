@@ -54,6 +54,12 @@ export const images = [
     landscape: false
   },
   {
+    link: 'walkInThePark',
+    title: 'Walk in the Park',
+    location: 'Austin, Texas',
+    landscape: true
+  },
+  {
     link: 'ferris-wheel2',
     title: 'Untitled',
     location: 'Seattle, Washington',
