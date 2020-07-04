@@ -110,6 +110,15 @@
   width: 96%;
 }
 
+.photo-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.photo-wrapper {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 .gallery-tile {
   border: 1px solid $main-color;
   cursor: pointer;
