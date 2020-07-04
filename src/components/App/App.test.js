@@ -67,11 +67,11 @@ describe('App', () => {
 
     it('Should return the length of the images array minus 1 if the page is one and the id is prev', () => {
       const num = instance.checkImgPosition('prev', 1);
-      expect(num).toEqual(38);
+      expect(num).toEqual(39);
     });
 
     it('Should return 0 if the page is equal to the length of the images array and the id is next', () => {
-      const num = instance.checkImgPosition('next', 39);
+      const num = instance.checkImgPosition('next', 40);
       expect(num).toEqual(0);
     });
 
@@ -92,7 +92,7 @@ describe('App', () => {
         target: {
           id: 'next'
         }
-      }, 39);
+      }, 40);
       expect(instance.changeImage).toHaveBeenCalledWith(0);
       expect(instance.changePage).toHaveBeenCalledWith(1);
     });
