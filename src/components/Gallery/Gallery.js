@@ -8,11 +8,18 @@ export class Gallery extends Component {
   state = {
     photoNumber: '',
     images: [],
+    error: '',
   }
 
   renderImages = () => {
     const images = [];
     const { photoNumber } = this.state;
+
+    if (photoNumber > 1000) {
+      const error = 'Whoa there!  Not that big. Think like <= 1000.'
+      this.setState({ error, photoNumber: '' });
+      return null;
+    }
 
     for (let i = 0; i < photoNumber; i++) {
       const image = (
@@ -29,7 +36,7 @@ export class Gallery extends Component {
       );
       images.push(image);
     }
-    this.setState({ images });
+    this.setState({ images, error: '', photoNumber: '' });
   };
 
   handleChange = (event) => {
@@ -43,7 +50,7 @@ export class Gallery extends Component {
   }
 
   render() {
-    const { photoNumber, images } = this.state;
+    const { photoNumber, images, error } = this.state;
 
     return (
       <div className="Gallery">
@@ -90,6 +97,9 @@ export class Gallery extends Component {
                   backgroundColor: 'chartreuse'
                 }}
               />
+              <p style={{ color: 'red', marginTop: '10px', }}>
+                {error && error}
+              </p>
             </form>
             <section className="photo-wrapper">
               {images && images.length > 0 && images}
