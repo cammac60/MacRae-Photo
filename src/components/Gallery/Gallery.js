@@ -29,7 +29,7 @@ export class Gallery extends Component {
       );
       images.push(image);
     }
-    this.setState({ images })
+    this.setState({ images });
   };
 
   handleChange = (event) => {
