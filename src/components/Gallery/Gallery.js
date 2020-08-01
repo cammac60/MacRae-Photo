@@ -13,7 +13,6 @@ export class Gallery extends Component {
   renderImages = () => {
     const images = [];
     const { photoNumber } = this.state;
-    const { handleImgClick } = this.props;
 
     for (let i = 0; i < photoNumber; i++) {
       const image = (
