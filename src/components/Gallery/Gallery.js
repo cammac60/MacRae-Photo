@@ -18,13 +18,14 @@ export class Gallery extends Component {
     for (let i = 0; i < photoNumber; i++) {
       const image = (
         <div className="blur-wrapper-3" key={i}>
-          <img
-            alt="cat"
-            id={`cool-photo-${i}`}
-            className="gallery-tile"
-            src="https://cataas.com/c/gif/s/Hello?"
-            onClick={e => handleImgClick(e)}
-          />
+          <a href="https://cataas.com/#/" target="_blank" rel="noopener noreferrer">
+            <img
+              alt="cat"
+              id={`cool-photo-${i}`}
+              className="gallery-tile"
+              src="https://cataas.com/c/gif/s/Hello?"
+            />
+          </a>
         </div>
       );
       images.push(image);
