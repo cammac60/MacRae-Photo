@@ -1,11 +1,11 @@
 @import '../../variables.scss';
 
-.Contact {
+.contact {
   height: 100vh;
   width: 100vw;
 }
 
-.contact-back {
+.contact__background {
   background: {
     image: url('../../images/main/van-skyline2.JPG');
     position: center;
@@ -17,7 +17,7 @@
   width: 100%;
 }
 
-.contact-wrapper {
+.contact__wrapper {
   background: {
     color: rgba(0, 0, 0, 0.7);
     image: url('../../images/main/van-skyline2.JPG');
@@ -40,7 +40,7 @@
   width: 95%;
 }
 
-.email-input-wrapper {
+.contact__email-wrapper {
   display: flex;
   justify-content: space-between;
   margin: {
@@ -51,7 +51,7 @@
   width: 90%;
 }
 
-.input-label {
+.contact__input-label {
   font: {
     size: 2rem;
     weight: 300;
@@ -59,7 +59,7 @@
   margin-right: 20px;
 }
 
-.contact-input {
+.contact__input {
   background-color: rgba(0, 0, 0, 0);
   border: 1px solid $main-color;
   font: {
@@ -76,7 +76,7 @@
   width: 300px;
 }
 
-.message-input-wrapper {
+.contact__message-wrapper {
   align-items: flex-start;
   display: flex;
   margin: {
@@ -92,7 +92,7 @@
   width: 90%;
 }
 
-.title-input-wrapper {
+.contact__title-wrapper {
   display: flex;
   justify-content: space-between;
   margin: {
@@ -102,7 +102,7 @@
   width: 90%;
 }
 
-.contact-header {
+.contact__title {
   font: {
     family: $large-font;
     size: 5rem;
@@ -110,7 +110,7 @@
   }
 }
 
-.message-btn {
+.contact__button {
   background-color: $main-accent-color;
   border: none;
   color: #000000;
@@ -130,7 +130,7 @@
   }
 }
 
-.form-error {
+.contact__form-error {
   color: red;
   font: {
     size: 1.4rem;

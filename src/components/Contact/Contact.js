@@ -70,27 +70,27 @@ export class Contact extends Component {
 
   render  = () => {
     return (
-      <div className="Contact">
+      <div className="contact">
         {this.state.popUpEnabled ? <Popup closePopup={this.closePopup}/> : null}
-        <div className="contact-back">
+        <div className="contact__background">
           <div className="blur-wrapper">
-            <div className="contact-wrapper">
-              <div className="email-input-wrapper">
-                <div className="email-section">
-                  <label htmlFor="email" className="input-label">Email:</label>
-                  <input className="contact-input" id="email" value={this.state.email} onChange={e => this.handleChange(e)} autoComplete="off"/>
+            <div className="contact__wrapper">
+              <div className="contact__email-wrapper">
+                <div className="contact__email-section">
+                  <label htmlFor="email" className="contact__input-label">Email:</label>
+                  <input className="contact__input" id="email" value={this.state.email} onChange={e => this.handleChange(e)} autoComplete="off"/>
                 </div>
                 <Link to="/" className="back-btn">Back</Link>
               </div>
-              <div className="message-input-wrapper">
-                <label htmlFor="message" className="input-label">Message:</label>
-                <textarea className="contact-input" id="message" value={this.state.message} onChange={e => this.handleChange(e)}>
+              <div className="contact__message-wrapper">
+                <label htmlFor="message" className="contact__input-label">Message:</label>
+                <textarea className="contact__input" id="message" value={this.state.message} onChange={e => this.handleChange(e)}>
                 </textarea>
               </div>
-              <span className="form-error">{this.state.error}</span>
-              <div className="title-input-wrapper">
-                <h2 className="contact-header">Contact</h2>
-                <button className="message-btn" onClick={() => this.handleSubmit()}>Send</button>
+              <span className="contact__form-error">{this.state.error}</span>
+              <div className="contact__title-wrapper">
+                <h2 className="contact__title">Contact</h2>
+                <button className="contact__button" onClick={() => this.handleSubmit()}>Send</button>
               </div>
             </div>
           </div>
