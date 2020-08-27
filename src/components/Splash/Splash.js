@@ -8,15 +8,15 @@ export const Splash = props => {
 
   return (
     <div className="Splash">
-      <div className="splash-back">
+      <div className="splash__background">
         <div className="blur-wrapper">
-          <div className="menu-wrapper">
-          <div className="text-wrapper">
-            <h1 style={{color: selectedColor}}>MacRae Photo</h1>
-            <div className="options-wrapper-lrg">
-              <div className="link-wrapper">
+          <div className="splash__menu">
+          <div className="splash__text">
+            <h1 className="splash__title" style={{color: selectedColor}}>MacRae Photo</h1>
+            <div className="splash__options-wrapper">
+              <div className="splash__link-wrapper">
                 <Link
-                  className="menu-link"
+                  className="splash__link"
                   id="photo-link"
                   to="/gallery"
                   onMouseEnter={() => changeColor('#FFD700')}
@@ -25,7 +25,7 @@ export const Splash = props => {
                   Photos
                 </Link>
                 <Link
-                  className="menu-link"
+                  className="splash__link"
                   id="about-link"
                   to="/about"
                   onMouseEnter={() => changeColor('#4FD5FF')}
@@ -34,7 +34,7 @@ export const Splash = props => {
                   About
                 </Link>
                 <Link
-                  className="menu-link"
+                  className="splash__link"
                   id="contact-link"
                   to="/contact"
                   onMouseEnter={() => changeColor('#FF7373')}
@@ -43,8 +43,8 @@ export const Splash = props => {
                   Contact
                 </Link>
               </div>
-              <a className="ig-link" href="https://www.instagram.com/macrae_5280/?hl=en" target="_blank" rel="noopener noreferrer">
-                <img alt="Instagram Logo" src={require('../../images/icons/instagram.svg')} className="ig-logo" fill="#ffffff"/>
+              <a className="splash__ig-link" href="https://www.instagram.com/macrae_5280/?hl=en" target="_blank" rel="noopener noreferrer">
+                <img alt="Instagram Logo" src={require('../../images/icons/instagram.svg')} className="splash__ig-logo" fill="#ffffff"/>
               </a>
             </div>
           </div>

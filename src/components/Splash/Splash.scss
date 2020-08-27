@@ -5,7 +5,7 @@
   width: 100vw;
 }
 
-.splash-back {
+.splash__background {
   background: {
     image: url('../../images/main/rmnp-road2.JPG');
     position: center;
@@ -17,7 +17,7 @@
   width: 100%;
 }
 
-.menu-wrapper {
+.splash__menu {
   background: {
     image: url('../../images/main/rmnp-road2.JPG');
     position: center;
@@ -35,14 +35,14 @@
   width: 95%;
 }
 
-.text-wrapper {
+.splash__text {
   display: flex;
   height: 100%;
   justify-content: space-between;
   width: 100%;
 }
 
-h1 {
+.splash__title {
   font: {
     family: $large-font;
     size: 7rem;
@@ -54,20 +54,20 @@ h1 {
   }
 }
 
-.options-wrapper-lrg {
+.splash__options-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
 }
 
-.link-wrapper {
+.splash__link-wrapper {
   display: flex;
   flex-direction: column;
   text-align: right;
 }
 
-.menu-link {
+.splash__link {
   font: {
     size: 2.4rem;
     weight: 300;
@@ -97,12 +97,12 @@ h1 {
   }
 }
 
-.ig-link {
+.splash__ig-link {
   margin-left: auto;
   width: 50px;
 }
 
-.ig-logo {
+.splash__ig-logo {
   margin-left: auto;
   width: 100%;
 }
