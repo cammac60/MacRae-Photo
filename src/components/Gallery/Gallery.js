@@ -11,7 +11,7 @@ export const Gallery = props => {
           <img
             alt={img.title}
             id={i}
-            className="gallery-tile"
+            className="gallery__tile"
             src={require(`../../images/main/${img.link}.JPG`)}
             onClick={e => handleImgClick(e)}
             key={i}
@@ -21,19 +21,19 @@ export const Gallery = props => {
   });
 
   return (
-    <div className="Gallery">
-      <div className="gallery-back">
+    <div className="gallery">
+      <div className="gallery__background">
         <div className="blur-wrapper-2">
-          <header className="gallery-header">
-            <h2 className="gallery-title">Gallery</h2>
-            <div className="gallery-btn-wrapper">
-              <Link to="/" className="back-btn" id="gallery-back-btn">Back</Link>
+          <header className="gallery__header">
+            <h2 className="gallery__title">Gallery</h2>
+            <div className="gallery__btn-wrapper">
+              <Link to="/" className="back-btn" id="gallery__back-btn">Back</Link>
               <a className="ig-link" href="https://www.instagram.com/macrae_5280/?hl=en" target="_blank" rel="noopener noreferrer">
-                <img alt="Instagram Logo" src={require('../../images/icons/instagram.svg')} className="ig-logo-2" fill="#ffffff"/>
+                <img alt="Instagram Logo" src={require('../../images/icons/instagram.svg')} className="gallery__ig-logo" fill="#ffffff"/>
               </a>
             </div>
           </header>
-          <section className="photo-wrapper">
+          <section className="gallery__photo-wrapper">
             {imagesTiles}
           </section>
         </div>
