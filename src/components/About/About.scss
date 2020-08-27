@@ -1,11 +1,11 @@
 @import '../../variables.scss';
 
-.About {
+.about {
   height: 100vh;
   width: 100vw;
 }
 
-.about-back {
+.about__background {
   background: {
     image: url('../../images/main/rmnp2.JPG');
     position: center;
@@ -17,7 +17,7 @@
   width: 100%;
 }
 
-.about-wrapper {
+.about__wrapper {
   background: {
     color: rgba(0, 0, 0, 0.7);
     image: url('../../images/main/rmnp2.JPG');
@@ -37,7 +37,7 @@
   width: 95%;
 }
 
-.bio-wrapper {
+.about__bio-wrapper {
   display: flex;
   justify-content: space-between;
   margin: {
@@ -47,19 +47,19 @@
   width: 95%;
 }
 
-.profile-img {
+.about__profile-img {
   border: 1px solid $main-color;
   height: 500px;
   position: relative;
   top: -70px;
 }
 
-.bio-text {
+.about__text {
   text-indent: 20px;
   width: 100%;
 }
 
-.bio-text-wrapper {
+.about__text-wrapper {
   display: block;
   font: {
     size: 1.4rem;
@@ -69,7 +69,7 @@
   width: 55%;
 }
 
-.bio-footer {
+.about__footer {
   display: flex;
   justify-content: space-between;
   margin: {
@@ -80,7 +80,7 @@
   width: 95%;
 }
 
-.bio-name {
+.about__name {
   font: {
     family: $large-font;
     size: 5rem;
@@ -90,7 +90,7 @@
   max-height: 85px;
 }
 
-.back-btn {
+.about__button {
   font: {
     size: 2rem;
     weight: 300;
@@ -106,52 +106,52 @@
 }
 
 @media (max-width: 1150px) {
-  .bio-text {
+  .about__text {
     font-size: 1.2rem;
   }
-  .profile-img {
+  .about__profile-img {
     height: 450px;
   }
-  .bio-name {
+  .about__name {
     font-size: 4rem;
   }
-  .bio-footer {
+  .about__footer {
     margin-top: 100px;
   }
 }
 
 @media (max-width: 1025px) {
-  .bio-text {
+  .about__text {
     font-size: 1.1rem;
   }
-  .profile-img {
+  .about__profile-img {
     height: 400px;
   }
 }
 
 @media (max-width: 900px) {
-  .bio-text {
+  .about__text {
     font-size: 0.9rem;
   }
-  .profile-img {
+  .about__profile-img {
     height: 350px;
   }
-  .bio-footer {
+  .about__footer {
     margin-top: 200px;
   }
 }
 
 @media (max-width: 740px) {
-  .bio-text {
+  .about__text {
     font-size: 0.7rem;
   }
-  .profile-img {
+  .about__profile-img {
     height: 300px;
   }
-  .bio-footer {
+  .about__footer {
     margin-top: 250px;
   }
-  .bio-name {
+  .about__name {
     font-size: 3rem;
   }
 }
