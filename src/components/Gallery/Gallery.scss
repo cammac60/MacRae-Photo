@@ -1,11 +1,11 @@
 @import '../../variables.scss';
 
-.Gallery {
+.gallery {
   height: 100vh;
   width: 100vw;
 }
 
-.gallery-back {
+.gallery__background {
   background: {
     color: rgba(0, 0, 0, 0.8);
     image: url('../../images/dakota-hogback2.JPG');
@@ -19,22 +19,7 @@
   width: 100%;
 }
 
-.blur-wrapper-2 {
-  backdrop-filter: blur(2px);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: {
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 5%;
-  }
-  height: 100%;
-  width: 100%;
-}
-
-.gallery-header {
+.gallery__header {
   background: {
     color: rgba(0, 0, 0, 0.6);
     image: url('../../images/dakota-hogback2.JPG');
@@ -55,7 +40,7 @@
   }
 }
 
-.gallery-title {
+.gallery__title {
   color: $main-accent-color;
   font: {
     family: $large-font;
@@ -64,14 +49,14 @@
   }
 }
 
-.gallery-btn-wrapper {
+.gallery__btn-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   height: 100%;
 }
 
-#gallery-back-btn {
+#gallery__back-btn {
   &:hover {
     color: $main-accent-color;
   }
@@ -81,7 +66,7 @@
   margin: 0;
 }
 
-.ig-logo-2 {
+.gallery__ig-logo {
   cursor: pointer;
   height: 50px;
   margin: {
@@ -91,7 +76,7 @@
   width: 50px;
 }
 
-.photo-wrapper {
+.gallery__photo-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 400px);
   grid-column-gap: 90px;
@@ -102,24 +87,21 @@
     left: auto;
     right: auto;
   }
+  -ms-overflow-style: none;
   overflow-x: scroll;
   padding: {
     bottom: 5%;
     top: 5%;
   }
+  scrollbar-width: none;
   width: 96%;
 }
 
-.photo-wrapper::-webkit-scrollbar {
+.gallery__photo-wrapper::-webkit-scrollbar {
   display: none;
 }
 
-.photo-wrapper {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.gallery-tile {
+.gallery__tile {
   border: 1px solid $main-color;
   cursor: pointer;
   height: 400px;
@@ -138,36 +120,36 @@
 }
 
 @media (max-width: 1300px) {
-  .photo-wrapper {
+  .gallery__photo-wrapper {
     grid-template-columns: repeat(3, 300px);
     grid-column-gap: 22.5px;
     grid-row-gap: 12.5px;
   }
-  .gallery-tile {
+  .gallery__tile {
     height: 300px;
     width: 300px;
   }
 }
 
 @media (max-width: 1000px) {
-  .photo-wrapper {
+  .gallery__photo-wrapper {
     grid-template-columns: repeat(3, 200px);
     grid-column-gap: 15px;
     grid-row-gap: 8.5px;
   }
-  .gallery-tile {
+  .gallery__tile {
     height: 200px;
     width: 200px;
   }
 }
 
 @media (max-width: 660px) {
-  .photo-wrapper {
+  .gallery__photo-wrapper {
     grid-template-columns: repeat(3, 150px);
     grid-column-gap: 12px;
     grid-row-gap: 6px;
   }
-  .gallery-tile {
+  .gallery__tile {
     height: 150px;
     width: 150px;
   }
@@ -175,18 +157,18 @@
     height: 40px;
     width: 40px;
   }
-  .gallery-header {
+  .gallery__header {
     background-position: 40% 12%;
   }
 }
 
 @media (max-width: 494px) {
-  .photo-wrapper {
+  .gallery__photo-wrapper {
     grid-template-columns: repeat(3, 120px);
     grid-column-gap: 12px;
     grid-row-gap: 6px;
   }
-  .gallery-tile {
+  .gallery__tile {
     height: 120px;
     width: 120px;
   }
@@ -194,7 +176,7 @@
     height: 30px;
     width: 30px;
   }
-  .gallery-title {
+  .gallery__title {
     font-size: 4rem;
   }
   #gallery-back-btn {
@@ -203,12 +185,12 @@
 }
 
 @media (max-width: 405px) {
-  .photo-wrapper {
+  .gallery__photo-wrapper {
     grid-template-columns: repeat(3, 100px);
     grid-column-gap: 8.5px;
     grid-row-gap: 4.5px;
   }
-  .gallery-tile {
+  .gallery__tile {
     height: 100px;
     width: 100px;
   }
@@ -216,7 +198,7 @@
     height: 20px;
     width: 20px;
   }
-  .gallery-header {
+  .gallery__header {
     background-position: 30% 12%;
   }
   #gallery-back-btn {
