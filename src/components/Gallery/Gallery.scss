@@ -3,57 +3,111 @@
 .gallery {
   height: 100vh;
   width: 100vw;
-}
 
-.gallery__background {
-  background: {
-    color: rgba(0, 0, 0, 0.8);
-    image: url('../../images/dakota-hogback2.JPG');
-    position: center;
-    repeat: no-repeat;
-    size: cover;
+  &__background {
+    background: {
+      color: rgba(0, 0, 0, 0.8);
+      image: url('../../images/dakota-hogback2.JPG');
+      position: center;
+      repeat: no-repeat;
+      size: cover;
+    }
+    background-blend-mode: darken;
+    height: 100%;
+    position: fixed;
+    width: 100%;
   }
-  background-blend-mode: darken;
-  height: 100%;
-  position: fixed;
-  width: 100%;
-}
 
-.gallery__header {
-  background: {
-    color: rgba(0, 0, 0, 0.6);
-    image: url('../../images/dakota-hogback2.JPG');
-    position: 50% 12%;
-    repeat: no-repeat;
+  &__header {
+    background: {
+      color: rgba(0, 0, 0, 0.6);
+      image: url('../../images/dakota-hogback2.JPG');
+      position: 50% 12%;
+      repeat: no-repeat;
+    }
+    background-blend-mode: darken;
+    border: {
+      bottom: 1px solid $main-color;
+      top: 1px solid $main-color;
+    }
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: auto;
+    padding: {
+      left: 2%;
+      right: 2%;
+    }
   }
-  background-blend-mode: darken;
-  border: {
-    bottom: 1px solid $main-color;
-    top: 1px solid $main-color;
-  }
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: auto;
-  padding: {
-    left: 2%;
-    right: 2%;
-  }
-}
 
-.gallery__title {
-  color: $main-accent-color;
-  font: {
-    family: $large-font;
-    size: 6rem;
-    weight: normal;
+  &__title {
+    color: $main-accent-color;
+    font: {
+      family: $large-font;
+      size: 6rem;
+      weight: normal;
+    }
   }
-}
 
-.gallery__btn-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 100%;
+  &__btn-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+  }
+
+  &__ig-logo {
+    cursor: pointer;
+    height: 50px;
+    margin: {
+      bottom: 5%;
+      left: auto;
+    }
+    width: 50px;
+  }
+
+  &__photo-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    grid-column-gap: 90px;
+    grid-row-gap: 50px;
+    height: 100%;
+    justify-content: center;
+    margin: {
+      left: auto;
+      right: auto;
+    }
+    -ms-overflow-style: none;
+    overflow-x: scroll;
+    padding: {
+      bottom: 5%;
+      top: 5%;
+    }
+    scrollbar-width: none;
+    width: 96%;
+  }
+
+  &__photo-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__tile {
+    border: 1px solid $main-color;
+    cursor: pointer;
+    height: 400px;
+    margin: {
+      left: auto;
+      right: auto;
+    }
+    object-fit: cover;
+    width: 400px;
+    &:active {
+      filter: blur(2px);
+    }
+    &:hover {
+      border: 1px solid $main-accent-color;
+    }
+  }
+
 }
 
 #gallery__back-btn {
@@ -66,141 +120,122 @@
   margin: 0;
 }
 
-.gallery__ig-logo {
-  cursor: pointer;
-  height: 50px;
-  margin: {
-    bottom: 5%;
-    left: auto;
-  }
-  width: 50px;
-}
-
-.gallery__photo-wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 400px);
-  grid-column-gap: 90px;
-  grid-row-gap: 50px;
-  height: 100%;
-  justify-content: center;
-  margin: {
-    left: auto;
-    right: auto;
-  }
-  -ms-overflow-style: none;
-  overflow-x: scroll;
-  padding: {
-    bottom: 5%;
-    top: 5%;
-  }
-  scrollbar-width: none;
-  width: 96%;
-}
-
-.gallery__photo-wrapper::-webkit-scrollbar {
-  display: none;
-}
-
-.gallery__tile {
-  border: 1px solid $main-color;
-  cursor: pointer;
-  height: 400px;
-  margin: {
-    left: auto;
-    right: auto;
-  }
-  object-fit: cover;
-  width: 400px;
-  &:active {
-    filter: blur(2px);
-  }
-  &:hover {
-    border: 1px solid $main-accent-color;
-  }
-}
-
 @media (max-width: 1300px) {
-  .gallery__photo-wrapper {
-    grid-template-columns: repeat(3, 300px);
-    grid-column-gap: 22.5px;
-    grid-row-gap: 12.5px;
+  .gallery {
+
+    &__photo-wrapper {
+      grid-template-columns: repeat(3, 300px);
+      grid-column-gap: 22.5px;
+      grid-row-gap: 12.5px;
+    }
+
+    &__tile {
+      height: 300px;
+      width: 300px;
+    }
   }
-  .gallery__tile {
-    height: 300px;
-    width: 300px;
-  }
+
 }
 
 @media (max-width: 1000px) {
-  .gallery__photo-wrapper {
-    grid-template-columns: repeat(3, 200px);
-    grid-column-gap: 15px;
-    grid-row-gap: 8.5px;
-  }
-  .gallery__tile {
-    height: 200px;
-    width: 200px;
+  .gallery {
+
+    &__photo-wrapper {
+      grid-template-columns: repeat(3, 200px);
+      grid-column-gap: 15px;
+      grid-row-gap: 8.5px;
+    }
+
+    &__tile {
+      height: 200px;
+      width: 200px;
+    }
+
   }
 }
 
 @media (max-width: 660px) {
-  .gallery__photo-wrapper {
-    grid-template-columns: repeat(3, 150px);
-    grid-column-gap: 12px;
-    grid-row-gap: 6px;
+  .gallery {
+
+    &__photo-wrapper {
+      grid-template-columns: repeat(3, 150px);
+      grid-column-gap: 12px;
+      grid-row-gap: 6px;
+    }
+
+    &__tile {
+      height: 150px;
+      width: 150px;
+    }
+
+    &__header {
+      background-position: 40% 12%;
+    }
+
   }
-  .gallery__tile {
-    height: 150px;
-    width: 150px;
-  }
+
   .ig-logo-2 {
     height: 40px;
     width: 40px;
   }
-  .gallery__header {
-    background-position: 40% 12%;
-  }
+
 }
 
 @media (max-width: 494px) {
-  .gallery__photo-wrapper {
-    grid-template-columns: repeat(3, 120px);
-    grid-column-gap: 12px;
-    grid-row-gap: 6px;
+  .gallery {
+
+    &__photo-wrapper {
+      grid-template-columns: repeat(3, 120px);
+      grid-column-gap: 12px;
+      grid-row-gap: 6px;
+    }
+
+    &__tile {
+      height: 120px;
+      width: 120px;
+    }
+
+    &__title {
+      font-size: 4rem;
+    }
+
   }
-  .gallery__tile {
-    height: 120px;
-    width: 120px;
-  }
+
   .ig-logo-2 {
     height: 30px;
     width: 30px;
   }
-  .gallery__title {
-    font-size: 4rem;
-  }
+
   #gallery-back-btn {
     font-size: 2rem;
   }
 }
 
 @media (max-width: 405px) {
-  .gallery__photo-wrapper {
-    grid-template-columns: repeat(3, 100px);
-    grid-column-gap: 8.5px;
-    grid-row-gap: 4.5px;
+  .gallery {
+
+    &__photo-wrapper {
+      grid-template-columns: repeat(3, 100px);
+      grid-column-gap: 8.5px;
+      grid-row-gap: 4.5px;
+    }
+
+    &__tile {
+      height: 100px;
+      width: 100px;
+    }
+
+    &__header {
+      background-position: 30% 12%;
+    }
+    
   }
-  .gallery__tile {
-    height: 100px;
-    width: 100px;
-  }
+
   .ig-logo-2 {
     height: 20px;
     width: 20px;
   }
-  .gallery__header {
-    background-position: 30% 12%;
-  }
+
   #gallery-back-btn {
     font-size: 1.5rem;
   }
