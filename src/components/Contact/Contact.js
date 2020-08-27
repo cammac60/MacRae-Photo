@@ -69,6 +69,8 @@ export class Contact extends Component {
   };
 
   render  = () => {
+    let { email, message, error } = this.state;
+
     return (
       <div className="contact">
         {this.state.popUpEnabled ? <Popup closePopup={this.closePopup}/> : null}
@@ -78,16 +80,16 @@ export class Contact extends Component {
               <div className="contact__email-wrapper">
                 <div className="contact__email-section">
                   <label htmlFor="email" className="contact__input-label">Email:</label>
-                  <input className="contact__input" id="email" value={this.state.email} onChange={e => this.handleChange(e)} autoComplete="off"/>
+                  <input className="contact__input" id="email" value={email} onChange={e => this.handleChange(e)} autoComplete="off"/>
                 </div>
                 <Link to="/" className="back-btn">Back</Link>
               </div>
               <div className="contact__message-wrapper">
                 <label htmlFor="message" className="contact__input-label">Message:</label>
-                <textarea className="contact__input" id="message" value={this.state.message} onChange={e => this.handleChange(e)}>
+                <textarea className="contact__input" id="message" value={message} onChange={e => this.handleChange(e)}>
                 </textarea>
               </div>
-              <span className="contact__form-error">{this.state.error}</span>
+              <span className="contact__form-error">{error}</span>
               <div className="contact__title-wrapper">
                 <h2 className="contact__title">Contact</h2>
                 <button className="contact__button" onClick={() => this.handleSubmit()}>Send</button>
