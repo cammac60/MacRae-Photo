@@ -1,82 +1,93 @@
 @import '../../variables.scss';
 
-.Splash {
+.splash {
   height: 100vh;
   width: 100vw;
-}
 
-.splash__background {
-  background: {
-    image: url('../../images/main/rmnp-road2.JPG');
-    position: center;
-    repeat: no-repeat;
-    size: cover;
+  &__background {
+    background: {
+      image: url('../../images/main/rmnp-road2.JPG');
+      position: center;
+      repeat: no-repeat;
+      size: cover;
+    }
+    height: 100%;
+    position: fixed;
+    width: 100%;
   }
-  height: 100%;
-  position: fixed;
-  width: 100%;
-}
 
-.splash__menu {
-  background: {
-    image: url('../../images/main/rmnp-road2.JPG');
-    position: center;
-    repeat: no-repeat;
-    size: cover;
+  &__menu {
+    background: {
+      image: url('../../images/main/rmnp-road2.JPG');
+      position: center;
+      repeat: no-repeat;
+      size: cover;
+    }
+    border: 1px solid $main-color;
+    height: 675px;
+    margin: {
+      right: auto;
+      top: auto;
+    }
+    overflow: hidden;
+    padding: 2%;
+    width: 95%;
   }
-  border: 1px solid $main-color;
-  height: 675px;
-  margin: {
-    right: auto;
-    top: auto;
-  }
-  overflow: hidden;
-  padding: 2%;
-  width: 95%;
-}
 
-.splash__text {
-  display: flex;
-  height: 100%;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.splash__title {
-  font: {
-    family: $large-font;
-    size: 7rem;
-    weight: normal;
+  &__text {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    width: 100%;
   }
-  margin: {
-    top: auto;
-    bottom: -2.5%;
-  }
-}
 
-.splash__options-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-}
-
-.splash__link-wrapper {
-  display: flex;
-  flex-direction: column;
-  text-align: right;
-}
-
-.splash__link {
-  font: {
-    size: 2.4rem;
-    weight: 300;
+  &__title {
+    font: {
+      family: $large-font;
+      size: 7rem;
+      weight: normal;
+    }
+    margin: {
+      top: auto;
+      bottom: -2.5%;
+    }
   }
-  margin-bottom: 10%;
-  text-decoration: none;
-  &:active {
-    text-decoration: underline;
+
+  &__options-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
   }
+
+  &__link-wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+  }
+
+  &__link {
+    font: {
+      size: 2.4rem;
+      weight: 300;
+    }
+    margin-bottom: 10%;
+    text-decoration: none;
+    &:active {
+      text-decoration: underline;
+    }
+  }
+
+  &__ig-link {
+    margin-left: auto;
+    width: 50px;
+  }
+
+  &__ig-logo {
+    margin-left: auto;
+    width: 100%;
+  }
+
 }
 
 #photo-link {
@@ -95,16 +106,6 @@
   &:hover {
     color: $secondary-accent-2;
   }
-}
-
-.splash__ig-link {
-  margin-left: auto;
-  width: 50px;
-}
-
-.splash__ig-logo {
-  margin-left: auto;
-  width: 100%;
 }
 
 @media (max-width: 899px) {
