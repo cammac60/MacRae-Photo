@@ -7,7 +7,7 @@ export const Splash = props => {
   const { selectedColor, changeColor } = props;
 
   return (
-    <div className="Splash">
+    <div className="splash">
       <div className="splash__background">
         <div className="blur-wrapper">
           <div className="splash__menu">
