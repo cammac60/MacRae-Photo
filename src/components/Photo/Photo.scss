@@ -1,7 +1,6 @@
 @import '../../variables.scss';
 
 .photo {
-
   height: 100vh;
   width: 100vw;
 
@@ -27,64 +26,73 @@
   height: 100%;
   justify-content: space-between;
   width: 100%;
-}
 
-.port__photo {
-  border: 2px solid $main-color;
-  height: 100%;
-}
-
-.landscape__photo {
-  border: 2px solid $main-color;
-  height: 75%;
-}
-
-.port__text-wrap {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: space-between;
-  text-align: right;
-}
-
-.landscape__wrap {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: space-between;
-  text-align: left;
-}
-
-.landscape__title, .port__title {
-  color: $main-accent-color;
-  font: {
-    family: $large-font;
-    size: 6rem;
-    weight: normal;
-  }
-}
-
-.port__location, .landscape__location {
-  font: {
-    size: 1.6rem;
-    weight: 300;
-  }
-}
-
-.port__back-btn, .landscape__back-btn {
-  &:hover {
+  &__title {
     color: $main-accent-color;
+    font: {
+      family: $large-font;
+      size: 6rem;
+      weight: normal;
+    }
   }
-  &:active {
-    text-decoration: underline;
+
+  &__location {
+    font: {
+      size: 1.6rem;
+      weight: 300;
+    }
   }
-  font: {
-    size: 2rem;
-    weight: 300;
+
+  &__back-btn {
+    &:hover {
+      color: $main-accent-color;
+    }
+    &:active {
+      text-decoration: underline;
+    }
+    font: {
+      size: 2rem;
+      weight: 300;
+    }
+    margin-top: auto;
+    text-align: right;
+    text-decoration: none;
   }
-  margin-top: auto;
-  text-align: right;
-  text-decoration: none;
+
+}
+
+.port {
+
+  &__photo {
+    border: 2px solid $main-color;
+    height: 100%;
+  }
+
+  &__text-wrap {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    text-align: right;
+  }
+
+}
+
+.landscape {
+
+  &__photo {
+    border: 2px solid $main-color;
+    height: 75%;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    text-align: left;
+  }
+
 }
 
 .image-ctrl {
@@ -121,64 +129,64 @@
 
 
 @media (max-width: 980px) {
-  .photo-title {
+  .port__title, .landscape__title {
     font-size: 5rem;
   }
 }
 
 @media (max-width: 900px) {
-  .photo-title {
+  .port__title, .landscape__title {
     font-size: 4rem;
   }
 }
 
 @media (max-width: 830px) {
-  .photo-title {
+  .port__title, .landscape__title {
     font-size: 3rem;
   }
 }
 
 @media (max-width: 775px) {
-  .photo-location {
+  .port__location, .landscape__location {
     font-size: 1.4rem;
   }
-  .port-photo {
+  .port__title, .landscape__title {
     height: 90%;
   }
 }
 
 @media (max-width: 710px) {
-  .photo-location {
+  .port__location, .landscape__location {
     font-size: 1.2rem;
   }
-  .port-photo {
+  .port__photo {
     height: 75%;
   }
-  .photo-title {
+  .port__title, .landscape__title {
     font-size: 2rem;
   }
 }
 
 @media (max-width: 560px) {
-  .photo-location {
+  .port__location, .landscape__location {
     font-size: 1rem;
   }
-  .port-photo {
+  .port__photo {
     height: 70%;
   }
-  .photo-title {
+  .port__title, .landscape__title {
     font-size: 1.5rem;
   }
 }
 
 @media (max-width: 450px) {
-  .photo-location {
+  .port__location, .landscape__location {
     font-size: 0.5rem;
   }
-  .port-photo {
+  .port__photo {
     height: 60%;
   }
-  .photo-title {
+  .port__title, .landscape__title {
     font-size: 0.7rem;
   }
 }
