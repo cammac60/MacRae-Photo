@@ -24,7 +24,7 @@ describe('Gallery', () => {
   });
 
   it('Should invoke handleImgClick onClick of the image', () => {
-    wrapper.find('.gallery-tile').simulate('click', {});
+    wrapper.find('.gallery__tile').simulate('click', {});
     expect(handleImgClick).toHaveBeenCalled();
   });
 
