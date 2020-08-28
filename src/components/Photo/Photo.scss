@@ -1,43 +1,45 @@
 @import '../../variables.scss';
 
-.Photo {
+.photo {
+
   height: 100vh;
   width: 100vw;
-}
 
-.photo-back {
-  background: {
-    color: rgba(0, 0, 0, 0.6);
-    image: url('../../images/rmnp-back.png');
-    position: center;
-    repeat: no-repeat;
-    size: cover;
+  &__background {
+    background: {
+      color: rgba(0, 0, 0, 0.6);
+      image: url('../../images/rmnp-back.png');
+      position: center;
+      repeat: no-repeat;
+      size: cover;
+    }
+    background-blend-mode: darken;
+    height: 100%;
+    padding: 2%;
+    position: fixed;
+    width: 100%;
   }
-  background-blend-mode: darken;
-  height: 100%;
-  padding: 2%;
-  position: fixed;
-  width: 100%;
+
 }
 
-.port-wrap, .landscape-wrap {
+.port, .landscape {
   display: flex;
   height: 100%;
   justify-content: space-between;
   width: 100%;
 }
 
-.port-photo {
+.port__photo {
   border: 2px solid $main-color;
   height: 100%;
 }
 
-.landscape-photo {
+.landscape__photo {
   border: 2px solid $main-color;
   height: 75%;
 }
 
-.port-text-wrap {
+.port__text-wrap {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -45,7 +47,7 @@
   text-align: right;
 }
 
-.landscape-photo-wrap {
+.landscape__wrap {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -53,7 +55,7 @@
   text-align: left;
 }
 
-.photo-title {
+.landscape__title, .port__title {
   color: $main-accent-color;
   font: {
     family: $large-font;
@@ -62,14 +64,14 @@
   }
 }
 
-.photo-location {
+.port__location, .landscape__location {
   font: {
     size: 1.6rem;
     weight: 300;
   }
 }
 
-.photo-back-btn {
+.port__back-btn, .landscape__back-btn {
   &:hover {
     color: $main-accent-color;
   }
@@ -103,18 +105,20 @@
   right: 0;
   top: 0;
   width: 60px;
+
+  &__arrow {
+    cursor: pointer;
+    height: 20px;
+    &:hover {
+      background-color: $main-accent-color;
+    }
+    &:active {
+      background-color: $secondary-accent-1;
+    }
+  }
+
 }
 
-.arrow {
-  cursor: pointer;
-  height: 20px;
-  &:hover {
-    background-color: $main-accent-color;
-  }
-  &:active {
-    background-color: $secondary-accent-1;
-  }
-}
 
 @media (max-width: 980px) {
   .photo-title {

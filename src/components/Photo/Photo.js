@@ -8,39 +8,39 @@ export const Photo = props => {
 
   const imageCtrl =
     <div className="image-ctrl">
-      <img className="arrow" src={require('../../images/icons/left-arrow.svg')} id="prev" alt="Previous icon" tooltip="Previous" onClick={e => handleArrowClick(e, curImgId)}/>
-      <img className="arrow" src={require('../../images/icons/right-arrow.svg')} id="next" alt="Next icon" tooltip="Next" onClick={e => handleArrowClick(e, curImgId)}/>
+      <img className="image-ctrl__arrow" src={require('../../images/icons/left-arrow.svg')} id="prev" alt="Previous icon" tooltip="Previous" onClick={e => handleArrowClick(e, curImgId)}/>
+      <img className="image-ctrl__arrow" src={require('../../images/icons/right-arrow.svg')} id="next" alt="Next icon" tooltip="Next" onClick={e => handleArrowClick(e, curImgId)}/>
     </div>;
 
   let landscapeWrap =
-    <div className="landscape-wrap">
-      <div className="landscape-photo-wrap">
-        <div className="landscape-title-wrap">
-          <h2 className="photo-title">{image.title}</h2>
-          <span className="photo-location">{image.location}</span>
+    <div className="landscape">
+      <div className="landscape__wrap">
+        <div className="landscape__title-wrap">
+          <h2 className="landscape__title">{image.title}</h2>
+          <span className="landscape__location">{image.location}</span>
         </div>
-        <img alt={image.title} src={require(`../../images/main/${image.link}.JPG`)} className="landscape-photo"/>
+        <img alt={image.title} src={require(`../../images/main/${image.link}.JPG`)} className="landscape__photo"/>
         {imageCtrl}
       </div>
-      <Link to="/gallery" className="photo-back-btn" id="landscape-back-btn">Back</Link>
+      <Link to="/gallery" className="landscape__back-btn" >Back</Link>
     </div>;
 
   let portWrap =
-    <div className="port-wrap">
-      <img alt={image.title} src={require(`../../images/main/${image.link}.JPG`)} className="port-photo"/>
+    <div className="port">
+      <img alt={image.title} src={require(`../../images/main/${image.link}.JPG`)} className="port__photo"/>
       {imageCtrl}
-      <div className="port-text-wrap">
-        <div className="port-title-wrap">
-          <h2 className="photo-title">{image.title}</h2>
-          <span className="photo-location">{image.location}</span>
+      <div className="port__text-wrap">
+        <div className="port__title-wrap">
+          <h2 className="port__title">{image.title}</h2>
+          <span className="port__location">{image.location}</span>
         </div>
-        <Link to="/gallery" className="photo-back-btn">Back</Link>
+        <Link to="/gallery" className="port__back-btn">Back</Link>
       </div>
     </div>;
 
   return (
-    <div className="Photo">
-      <div className="photo-back">
+    <div className="photo">
+      <div className="photo__background">
         {image.landscape ? landscapeWrap : portWrap}
       </div>
     </div>
