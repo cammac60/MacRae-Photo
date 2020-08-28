@@ -21,6 +21,7 @@ export const Splash = props => {
                   to="/gallery"
                   onMouseEnter={() => changeColor('#FFD700')}
                   onMouseLeave={() => changeColor('#ffffff')}
+                  onClick={() => changeColor('#ffffff')}
                 >
                   Photos
                 </Link>
@@ -30,6 +31,7 @@ export const Splash = props => {
                   to="/about"
                   onMouseEnter={() => changeColor('#4FD5FF')}
                   onMouseLeave={() => changeColor('#ffffff')}
+                  onClick={() => changeColor('#ffffff')}
                 >
                   About
                 </Link>
@@ -39,6 +41,7 @@ export const Splash = props => {
                   to="/contact"
                   onMouseEnter={() => changeColor('#FF7373')}
                   onMouseLeave={() => changeColor('#ffffff')}
+                  onClick={() => changeColor('#ffffff')}
                 >
                   Contact
                 </Link>
