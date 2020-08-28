@@ -20,7 +20,7 @@ describe('Popup', () => {
   });
 
   it('Should invoke the closePopup method when the close button is clicked', () => {
-    wrapper.find('.exit-btn').simulate('click');
+    wrapper.find('.popup__button').simulate('click');
     expect(closePopup).toHaveBeenCalled();
   });
 
