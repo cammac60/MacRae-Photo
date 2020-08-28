@@ -43,7 +43,7 @@ describe('Contact', () => {
 
   it('Should invoke the handle submit method onClick of the submit button', () => {
     instance.handleSubmit = jest.fn();
-    wrapper.find('.message-btn').simulate('click');
+    wrapper.find('.contact__button').simulate('click');
     expect(instance.handleSubmit).toHaveBeenCalled();
   });
 
