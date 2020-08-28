@@ -127,10 +127,18 @@
 
 }
 
+@media (max-width: 1150px) {
+  .landscape__photo {
+    height: 65%;
+  }
+}
 
 @media (max-width: 980px) {
   .port__title, .landscape__title {
     font-size: 5rem;
+  }
+  .landscape__photo {
+    height: 55%;
   }
 }
 
@@ -144,6 +152,9 @@
   .port__title, .landscape__title {
     font-size: 3rem;
   }
+  .landscape__photo {
+    height: 50%;
+  }
 }
 
 @media (max-width: 775px) {
@@ -152,6 +163,9 @@
   }
   .port__title, .landscape__title {
     height: 90%;
+  }
+  .landscape__photo {
+    height: 45%;
   }
 }
 
@@ -165,6 +179,9 @@
   .port__title, .landscape__title {
     font-size: 2rem;
   }
+  .landscape__photo {
+    height: 40%;
+  }
 }
 
 @media (max-width: 560px) {
@@ -177,6 +194,9 @@
   .port__title, .landscape__title {
     font-size: 1.5rem;
   }
+  .landscape__photo {
+    height: 35%;
+  }
 }
 
 @media (max-width: 450px) {
@@ -188,5 +208,8 @@
   }
   .port__title, .landscape__title {
     font-size: 0.7rem;
+  }
+  .landscape__photo {
+    height: 20%;
   }
 }
