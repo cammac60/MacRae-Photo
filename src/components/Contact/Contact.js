@@ -15,7 +15,8 @@ export class Contact extends Component {
       email: '',
       message: '',
       error: '',
-      popUpEnabled: false
+      popUpEnabled: false,
+      buttonDisabled: false
     }
   }
 
@@ -44,14 +45,15 @@ export class Contact extends Component {
   handleSubmit = async () => {
     const { email, message } = this.state;
     if (this.validateSubmit()) {
+      this.setState({buttonDisabled: true});
       try {
         const response = await postMessage(email, message);
         this.clearState();
-        return response;
       } catch(error) {
           console.log(error);
           this.setState({error: 'There was a problem sending your message - Please try again.'});
       }
+      this.setState({buttonDisabled: false});
     }
   };
 
@@ -92,7 +94,7 @@ export class Contact extends Component {
               <span className="contact__form-error">{error}</span>
               <div className="contact__title-wrapper">
                 <h2 className="contact__title">Contact</h2>
-                <button className="contact__button" onClick={() => this.handleSubmit()}>Send</button>
+                <button className="contact__button" onClick={() => this.handleSubmit()} disabled={this.state.buttonDisabled}>Send</button>
               </div>
             </div>
           </div>
