@@ -63,7 +63,8 @@ describe('Contact', () => {
         email: 'test@test.test',
         message: 'test',
         error: '',
-        popUpEnabled: false
+        popUpEnabled: false,
+        buttonDisabled: false
       });
     });
 
