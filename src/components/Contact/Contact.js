@@ -6,6 +6,7 @@ import './Contact.scss';
 import { postMessage } from '../../apiCalls';
 
 import { Popup } from '../Popup/Popup';
+import { Loader } from '../Loader/Loader';
 
 export class Contact extends Component {
 
@@ -16,7 +17,8 @@ export class Contact extends Component {
       message: '',
       error: '',
       popUpEnabled: false,
-      buttonDisabled: false
+      buttonDisabled: false,
+      loading: false
     }
   }
 
@@ -45,25 +47,35 @@ export class Contact extends Component {
   handleSubmit = async () => {
     const { email, message } = this.state;
     if (this.validateSubmit()) {
-      this.setState({buttonDisabled: true});
+      this.setState({
+        buttonDisabled: true,
+        loading: true
+      });
       try {
         const response = await postMessage(email, message);
         this.clearState();
       } catch(error) {
           console.log(error);
           this.setState({error: 'There was a problem sending your message - Please try again.'});
+          this.clearState(error);
       }
-      this.setState({buttonDisabled: false});
     }
   };
 
-  clearState = () => {
+  clearState = error => {
+    !error ?
     this.setState({
       email: '',
       message: '',
       error: '',
-      popUpEnabled: true
-    });
+      popUpEnabled: true,
+      buttonDisabled: false,
+      loading: false
+    }) :
+    this.setState({
+      buttonDisabled: false,
+      loading: false
+    })
   };
 
   closePopup = () => {
@@ -71,11 +83,12 @@ export class Contact extends Component {
   };
 
   render  = () => {
-    let { email, message, error } = this.state;
+    let { email, message, error, popUpEnabled, loading } = this.state;
 
     return (
       <div className="contact">
-        {this.state.popUpEnabled ? <Popup closePopup={this.closePopup}/> : null}
+        {popUpEnabled ? <Popup closePopup={this.closePopup}/> : null}
+        {loading ? <Loader /> : null}
         <div className="contact__background">
           <div className="blur-wrapper">
             <div className="contact__wrapper">
