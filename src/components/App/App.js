@@ -18,7 +18,7 @@ export class App extends Component {
       selectedImg: {}
     };
   }
-  
+
   componentDidMount = () => {
     document.title = 'MacRae Photo';
   };
