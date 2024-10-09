@@ -1,7 +1,5 @@
 # MacRae Photo
 
-[Deployed site](https://macraephoto.herokuapp.com/)
-
 Contributors: 
 
 [Cameron MacRae](https://github.com/cammac60)
